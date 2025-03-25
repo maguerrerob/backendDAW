@@ -56,6 +56,10 @@ def obtener_usuario_token(request, token):
         return Response(serializer.data)
     except AccessToken.DoesNotExist:
         return Response({"error": "Usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+    
+@api_view(["POST"])
+def registrar_usuario(request):
+    
 
 # @api_view(["POST"])
 # def crear_reseña(request):
