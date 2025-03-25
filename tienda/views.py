@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view
 from .forms import *
 from django.contrib.auth.models import AbstractUser
 from django.db.models import Avg
+
 # from django.contrib.auth import get_user_model
 
 # Create your views here.
@@ -44,6 +45,17 @@ def resenasProducto(request, id):
     reseñasProducto = Reseña.objects.filter(producto=id)
     serializer = ReseñaSerializer(reseñasProducto, many=True)
     return Response(serializer.data)
+
+from oauth2_provider.models import AccessToken
+@api_view(["GET"])
+def obtener_usuario_token(request, token):
+    try:
+        token = AccessToken.objects.get(token=token)
+        usuario = Usuario.objects.get(id=token.id)
+        serializer = UsuarioSerializer(usuario)
+        return Response(serializer.data)
+    except AccessToken.DoesNotExist:
+        return Response({"error": "Usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
 
 # @api_view(["POST"])
 # def crear_reseña(request):

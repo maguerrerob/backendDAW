@@ -8,4 +8,5 @@ urlpatterns = [
     # path('puntuacionReseñas/<int:id>/', views.returnmediaReseñas), # Por terminar
     path('resenasProducto/<int:id>', views.resenasProducto),
     # path('prueba')
+    path('obtenerUsuario/<int:token>', views.obtener_usuario_token)
 ]
