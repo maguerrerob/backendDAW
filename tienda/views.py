@@ -5,7 +5,7 @@ from .models import *
 from .serializers import *
 from rest_framework.decorators import api_view
 from .forms import *
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, Group
 from django.db.models import Avg
 
 # from django.contrib.auth import get_user_model
@@ -57,8 +57,43 @@ def obtener_usuario_token(request, token):
     except AccessToken.DoesNotExist:
         return Response({"error": "Usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
     
-@api_view(["POST"])
-def registrar_usuario(request):
+from rest_framework import generics
+from rest_framework.permissions import AllowAny
+
+class registrar_usuario(generics.CreateAPIView):
+    serializer_class = UsuarioSerializerRegister
+    permission_classes = [AllowAny]
+
+    def create(self, request, *args, **kwargs):
+        serializers = UsuarioSerializerRegister(data=request.data)
+        if serializers.is_valid():
+            try:
+                rol = request.data.get('rol')
+                user = Usuario.objects.create_user(
+                    first_name = serializers.data.get("first_name"),
+                    last_name = serializers.data.get("last_name"),
+                    email = serializers.data.get("email"),
+                    password = serializers.data.get("password"),
+                    telefono = serializers.data.get("telefono"),
+                    username = serializers.data.get("username"),
+                    rol = rol
+                )
+                if (rol == str(Usuario.CLIENTE)):
+                    grupo = Group.objects.get(name='Clientes')
+                    grupo.user_set.add(user)
+                    cliente = Cliente.objects.create(usuario=user)
+                    cliente.save()
+                elif (rol == Usuario.VENDEDOR):
+                    grupo = Group.objects.get(name='Vendedores')
+                    grupo.user_set.add(user)
+                    vendedor = Vendedor.objects.create(usuario=user)
+                    vendedor.save()
+                usuarioSerializado = UsuarioSerializer(user)
+                return Response(usuarioSerializado.data, status=status.HTTP_201_CREATED)
+            except Exception as error:
+                return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
 # @api_view(["POST"])

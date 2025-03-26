@@ -51,3 +51,19 @@ class CompraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Compra
         fields = '__all__'
+
+class UsuarioSerializerRegister(serializers.Serializer):
+    first_name = serializers.CharField()
+    last_name = serializers.CharField()
+    email = serializers.EmailField()
+    password1 = serializers.CharField()
+    password2 = serializers.CharField()
+    telefono = serializers.CharField()  
+    username = serializers.CharField()
+    rol = serializers.IntegerField()
+    
+    def validate_username(self, username):
+        usuario = Usuario.objects.filter(username=username).first()
+        if (not usuario is None):
+            raise serializers.ValidationError("El nombre de usuario ya existe.")
+        return username

@@ -9,5 +9,5 @@ urlpatterns = [
     path('resenasProducto/<int:id>', views.resenasProducto),
     # path('prueba')
     path('obtenerUsuario/<int:token>', views.obtener_usuario_token),
-    path('registrarUsuario/', views.registrar_usuario)
+    path('registrarUsuario/', views.registrar_usuario.as_view()),
 ]
