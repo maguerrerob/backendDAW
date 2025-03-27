@@ -67,3 +67,9 @@ class UsuarioSerializerRegister(serializers.Serializer):
         if (not usuario is None):
             raise serializers.ValidationError("El nombre de usuario ya existe.")
         return username
+    
+    def validate_email(self, email):
+        email = Usuario.objects.filter(email=email).first()
+        if (not email is None):
+            raise serializers.ValidationError("El correo ya existe.")
+        return email
