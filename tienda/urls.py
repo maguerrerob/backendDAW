@@ -10,4 +10,6 @@ urlpatterns = [
     # path('prueba')
     path('obtenerUsuario/<int:token>', views.obtener_usuario_token),
     path('registrarUsuario/', views.registrar_usuario.as_view()),
+    path('categorias/', views.obtener_categorias),
+    path('categoria/<int:id>/', views.obtener_categoria_por_id),
 ]

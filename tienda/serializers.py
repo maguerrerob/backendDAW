@@ -69,7 +69,13 @@ class UsuarioSerializerRegister(serializers.Serializer):
         return username
     
     def validate_email(self, email):
-        email = Usuario.objects.filter(email=email).first()
-        if (not email is None):
+        emailAComprobar = Usuario.objects.filter(email=email).first()
+        if (not emailAComprobar is None):
             raise serializers.ValidationError("El correo ya existe.")
         return email
+    
+    def validate_telefono(self, telefono):
+        tel = Usuario.objects.filter(telefono=telefono).first()
+        if (not tel is None):
+            raise serializers.ValidationError("El telefono ya existe.")
+        return telefono

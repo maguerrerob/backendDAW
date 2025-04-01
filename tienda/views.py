@@ -68,13 +68,13 @@ class registrar_usuario(generics.CreateAPIView):
         serializers = UsuarioSerializerRegister(data=request.data)
         if serializers.is_valid():
             try:
-                rol = request.data.get('rol')
+                rol = str(request.data.get("rol"))
                 user = Usuario.objects.create_user(
                     first_name = serializers.data.get("first_name"),
                     last_name = serializers.data.get("last_name"),
                     email = serializers.data.get("email"),
                     password = serializers.data.get("password"),
-                    telefono = serializers.data.get("telefono"),
+                    telefono = str(serializers.data.get("telefono")),
                     username = serializers.data.get("username"),
                     rol = rol
                 )
@@ -94,7 +94,28 @@ class registrar_usuario(generics.CreateAPIView):
                 return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+# Vista para obtener las categorias        
+@api_view(["GET"])
+def obtener_categorias(request):
+    try:
+        categorias = Categoria.objects.all()
+        serializer = CategoriaSerializer(categorias, many=True)
+        return Response(serializer.data)
+    except Exception as error:
+        return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
+# Vista para obtener una categoria por id
+@api_view(["GET"])
+def obtener_categoria_por_id(request, id):
+    try:
+        categoria = Categoria.objects.get(id=id)
+        serializer = CategoriaSerializer(categoria)
+        return Response(serializer.data)
+    except Categoria.DoesNotExist:
+        return Response({"error": "Categoría no encontrada."}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as error:
+        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # @api_view(["POST"])
 # def crear_reseña(request):
