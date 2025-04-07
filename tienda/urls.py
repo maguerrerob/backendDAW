@@ -9,4 +9,6 @@ urlpatterns = [
     path('categorias/', views.obtener_categorias.as_view()),
     path('productos/<int:id>', views.list_productos_categoria.as_view()),
     path('producto/<int:id>', views.returnProducto.as_view()),
+    # Búsqueda de productos por string
+    path('productos/<str:string>', views.get_busqueda_productos.as_view()),
 ]

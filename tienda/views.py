@@ -10,10 +10,11 @@ from django.db.models import Avg
 from rest_framework.views import APIView
 from rest_framework import generics
 from rest_framework.permissions import AllowAny
+from oauth2_provider.models import AccessToken
 
 # from django.contrib.auth import get_user_model
 
-# Create your views here.
+# Vistas Públicas
 
 class obtener_categorias(APIView):
     permission_classes = [AllowAny]
@@ -26,6 +27,7 @@ class obtener_categorias(APIView):
             return Response(serializer.data)
         except Exception as error:
             return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 class list_productos_categoria(APIView):
     permission_classes = [AllowAny]
@@ -41,6 +43,7 @@ class list_productos_categoria(APIView):
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
+
 class returnProducto(APIView):
     permission_classes = [AllowAny]
     def get(self, request, id):
@@ -53,6 +56,20 @@ class returnProducto(APIView):
             return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class get_busqueda_productos(APIView):
+    permission_classes = [AllowAny]
+    def get(self, request, string):
+        #Vusta para buscar productos por nombre
+        try:
+            productos = Producto.objects.filter(nombre__icontains=string)
+            serializers = ProductoSerializer(productos, many=True)
+            return Response(serializers.data)
+        except Producto.DoesNotExist:
+            return Response({"error": "Producto no encontrado"}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as error:
+            return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # @api_view(["GET"])
 # def returnmediaReseñas(request, id):
@@ -69,7 +86,11 @@ def resenasProducto(request, id):
     serializer = ReseñaSerializer(reseñasProducto, many=True)
     return Response(serializer.data)
 
-from oauth2_provider.models import AccessToken
+
+
+
+# Vistas de Sesiones
+
 @api_view(["GET"])
 def obtener_usuario_token(request, token):
     try:
@@ -80,8 +101,6 @@ def obtener_usuario_token(request, token):
     except AccessToken.DoesNotExist:
         return Response({"error": "Usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
     
-
-
 
 class registrar_usuario(generics.CreateAPIView):
     serializer_class = UsuarioSerializerRegister
