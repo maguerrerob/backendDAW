@@ -7,29 +7,52 @@ from rest_framework.decorators import api_view
 from .forms import *
 from django.contrib.auth.models import AbstractUser, Group
 from django.db.models import Avg
+from rest_framework.views import APIView
+from rest_framework import generics
+from rest_framework.permissions import AllowAny
 
 # from django.contrib.auth import get_user_model
 
 # Create your views here.
 
-@api_view(["GET"])
-def list_categorias(request):
-    """Vista para listar todas las categorías."""
-    categorias = Categoria.objects.all()
-    serializer = CategoriaSerializer(categorias, many=True)
-    return Response(serializer.data)
+class obtener_categorias(APIView):
+    permission_classes = [AllowAny]
 
-@api_view(["GET"])
-def list_productos(request):
-    productos = Producto.objects.all()
-    serializer = ProductoSerializer(productos, many=True)
-    return Response(serializer.data)
+    def get(self, request):
+        #Vista para listar todas las categorías
+        try:
+            categorias = Categoria.objects.all()
+            serializer = CategoriaSerializer(categorias, many=True)
+            return Response(serializer.data)
+        except Exception as error:
+            return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-@api_view(["GET"])
-def returnProducto(request, id):
-    producto = Producto.objects.get(id=id)
-    serializer = ProductoSerializer(producto)
-    return Response(serializer.data)
+class list_productos_categoria(APIView):
+    permission_classes = [AllowAny]
+    def get(self, request, id):
+        #Vista para listar productos por categoría
+        try:
+            categoria = Categoria.objects.get(id=id)
+            productos = Producto.objects.filter(categoria=categoria)
+            serializer = ProductoSerializer(productos, many=True)
+            return Response(serializer.data)
+        except Categoria.DoesNotExist:
+            return Response({"error": "Categoría no encontrada."}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as error:
+            return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+class returnProducto(APIView):
+    permission_classes = [AllowAny]
+    def get(self, request, id):
+        #Vista para obtener un producto por id
+        try:
+            producto = Producto.objects.get(id=id)
+            serializer = ProductoSerializer(producto)
+            return Response(serializer.data)
+        except Producto.DoesNotExist:
+            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as error:
+            return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # @api_view(["GET"])
 # def returnmediaReseñas(request, id):
@@ -57,8 +80,8 @@ def obtener_usuario_token(request, token):
     except AccessToken.DoesNotExist:
         return Response({"error": "Usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
     
-from rest_framework import generics
-from rest_framework.permissions import AllowAny
+
+
 
 class registrar_usuario(generics.CreateAPIView):
     serializer_class = UsuarioSerializerRegister
@@ -94,28 +117,18 @@ class registrar_usuario(generics.CreateAPIView):
                 return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
-        
-# Vista para obtener las categorias        
-@api_view(["GET"])
-def obtener_categorias(request):
-    try:
-        categorias = Categoria.objects.all()
-        serializer = CategoriaSerializer(categorias, many=True)
-        return Response(serializer.data)
-    except Exception as error:
-        return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
 # Vista para obtener una categoria por id
-@api_view(["GET"])
-def obtener_categoria_por_id(request, id):
-    try:
-        categoria = Categoria.objects.get(id=id)
-        serializer = CategoriaSerializer(categoria)
-        return Response(serializer.data)
-    except Categoria.DoesNotExist:
-        return Response({"error": "Categoría no encontrada."}, status=status.HTTP_404_NOT_FOUND)
-    except Exception as error:
-        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+# @api_view(["GET"])
+# def obtener_categoria_por_id(request, id):
+#     try:
+#         categoria = Categoria.objects.get(id=id)
+#         serializer = CategoriaSerializer(categoria)
+#         return Response(serializer.data)
+#     except Categoria.DoesNotExist:
+#         return Response({"error": "Categoría no encontrada."}, status=status.HTTP_404_NOT_FOUND)
+#     except Exception as error:
+#         return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # @api_view(["POST"])
 # def crear_reseña(request):
