@@ -58,11 +58,9 @@ MIDDLEWARE = [
 
 INTERNAL_IPS = ["127.0.0.1"]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
-ACCESS_CONTROL_ALLOW_ORIGIN = "http://localhost:4200"
+# ACCESS_CONTROL_ALLOW_ORIGIN = "http://localhost:4200"
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -141,7 +139,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'tienda.Usuario'
 
 OAUTH2_PROVIDER = {
-    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Acceso a los grupos'}
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Acceso a los grupos'},
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 360000000
 }
 
 REST_FRAMEWORK = {

@@ -96,6 +96,7 @@ def obtener_usuario_token(request, token):
     try:
         token = AccessToken.objects.get(token=token)
         usuario = Usuario.objects.get(id=token.id)
+        print(usuario)
         serializer = UsuarioSerializer(usuario)
         return Response(serializer.data)
     except AccessToken.DoesNotExist:
