@@ -11,6 +11,7 @@ from rest_framework.views import APIView
 from rest_framework import generics
 from rest_framework.permissions import AllowAny
 from oauth2_provider.models import AccessToken
+from django.shortcuts import get_object_or_404
 
 # from django.contrib.auth import get_user_model
 
@@ -93,50 +94,98 @@ def resenasProducto(request, id):
 
 @api_view(["GET"])
 def obtener_usuario_token(request, token):
+    # Vista para obtener el usuario a partir del token
     try:
-        token = AccessToken.objects.get(token=token)
-        usuario = Usuario.objects.get(id=token.id)
-        print(usuario)
+        modelotoken = AccessToken.objects.get(token=token)
+        usuario = Usuario.objects.get(id=modelotoken.user_id)
         serializer = UsuarioSerializer(usuario)
         return Response(serializer.data)
-    except AccessToken.DoesNotExist:
+    except Usuario.DoesNotExist:
         return Response({"error": "Usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as error:
+        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
-
+    
 class registrar_usuario(generics.CreateAPIView):
     serializer_class = UsuarioSerializerRegister
     permission_classes = [AllowAny]
 
     def create(self, request, *args, **kwargs):
         serializers = UsuarioSerializerRegister(data=request.data)
+
         if serializers.is_valid():
             try:
-                rol = str(request.data.get("rol"))
+                rol = request.data.get('rol')
+
                 user = Usuario.objects.create_user(
-                    first_name = serializers.data.get("first_name"),
-                    last_name = serializers.data.get("last_name"),
-                    email = serializers.data.get("email"),
-                    password = serializers.data.get("password"),
-                    telefono = str(serializers.data.get("telefono")),
-                    username = serializers.data.get("username"),
-                    rol = rol
-                )
-                if (rol == str(Usuario.CLIENTE)):
-                    grupo = Group.objects.get(name='Clientes')
+                        first_name = serializers.data.get("first_name"),
+                        last_name = serializers.data.get("last_name"),
+                        username = serializers.data.get("username"), 
+                        email = serializers.data.get("email"), 
+                        password = serializers.data.get("password1"),
+                        telefono = str(serializers.data.get("telefono")),
+                        rol = rol,
+                        )
+
+                if(int(rol) == Usuario.CLIENTE):
+                    grupo = Group.objects.get(id=1) 
                     grupo.user_set.add(user)
-                    cliente = Cliente.objects.create(usuario=user)
-                    cliente.save()
-                elif (rol == Usuario.VENDEDOR):
-                    grupo = Group.objects.get(name='Vendedores')
+                    miusuario = Cliente.objects.create( usuario = user)
+                    miusuario.save()
+
+                elif(int(rol) == Usuario.VENDEDOR):
+                    grupo = Group.objects.get(id = 2) 
                     grupo.user_set.add(user)
-                    vendedor = Vendedor.objects.create(usuario=user)
-                    vendedor.save()
+                    miusuario = Vendedor.objects.create(usuario = user)
+                    miusuario.save()
+
                 usuarioSerializado = UsuarioSerializer(user)
-                return Response(usuarioSerializado.data, status=status.HTTP_201_CREATED)
+
+                return Response(usuarioSerializado.data)
             except Exception as error:
-                return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                print(repr(error))
+                return Response(repr(error), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+# class registrar_usuario(generics.CreateAPIView):
+#     serializer_class = UsuarioSerializerRegister
+#     permission_classes = [AllowAny]
+
+#     def create(self, request, *args, **kwargs):
+#         serializers = UsuarioSerializerRegister(data=request.data)
+#         if serializers.is_valid():
+#             try:
+#                 rol = request.data.get("rol")
+#                 user = Usuario.objects.create_user(
+#                     first_name = serializers.data.get("first_name"),
+#                     last_name = serializers.data.get("last_name"),
+#                     email = serializers.data.get("email"),
+#                     password = serializers.data.get("password"),
+#                     telefono = str(serializers.data.get("telefono")),
+#                     username = serializers.data.get("username"),
+#                     rol = rol
+#                 )
+#                 if (int(rol) == Usuario.CLIENTE):
+#                     grupo = Group.objects.get(id=1)
+#                     grupo.user_set.add(user)
+#                     cliente = Cliente.objects.create(usuario=user)
+#                     cliente.save()
+#                 elif (rol == Usuario.VENDEDOR):
+#                     grupo = Group.objects.get(name='Vendedores')
+#                     grupo.user_set.add(user)
+#                     vendedor = Vendedor.objects.create(usuario=user)
+#                     vendedor.save()
+#                 usuarioSerializado = UsuarioSerializer(user)
+#                 return Response(usuarioSerializado.data, status=status.HTTP_201_CREATED)
+#             except Exception as error:
+#                 return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#         else:
+#             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
     
 # Vista para obtener una categoria por id
 # @api_view(["GET"])
