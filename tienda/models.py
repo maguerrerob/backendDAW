@@ -50,13 +50,10 @@ class Categoria(models.Model):
 class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     clientes = models.ManyToManyField(Cliente, through='Compra')
-    vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField()
     descripcion = models.TextField()
-    fecha_creacion = models.DateTimeField(default=timezone.now)
-    fecha_modificacion = models.DateTimeField(auto_now=True)
     foto = models.ImageField(upload_to='fotos/', null=True, blank=True)
 
     def __str__(self):

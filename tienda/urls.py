@@ -11,4 +11,10 @@ urlpatterns = [
     path('producto/<int:id>', views.returnProducto.as_view()),
     # Búsqueda de productos por string
     path('productos/<str:string>', views.get_busqueda_productos.as_view()),
+    # Importacion de productos CSV
+    path('importarProductos/', views.importarProductosCSV),
+    # Borrar producto
+    path('delProducto/<int:id>', views.borrar_producto),
+    # Actualizar nombre producto
+    path('updateNombre/<int:id>', views.cambiarNombre_producto),
 ]

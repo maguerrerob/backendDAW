@@ -27,10 +27,21 @@ class CategoriaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ProductoSerializer(serializers.ModelSerializer):
-    categoria = CategoriaSerializer(read_only=True)
+    categoria = serializers.PrimaryKeyRelatedField(
+        queryset=Categoria.objects.all()  # Valida PK de categoría
+    )
+    foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
     class Meta:
         model = Producto
-        fields = '__all__'
+        fields = [
+            'id',
+            'categoria',
+            'nombre',
+            'precio',
+            'stock',
+            'descripcion',
+            'foto',
+        ]
 
 class ReseñaSerializer(serializers.ModelSerializer):    
     class Meta:
@@ -79,3 +90,38 @@ class UsuarioSerializerRegister(serializers.Serializer):
         if (not tel is None):
             raise serializers.ValidationError("El telefono ya existe.")
         return telefono
+    
+
+#--------------------------------Cambiar nombre producto--------------------------------
+class ProductoSerializerUpdateNombre(serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields = ['nombre']
+
+    def validate_nombre(self, nombre):
+        # Para no validar si dejamos el mismo nombre de producto
+        if Producto.objects.exclude(pk=self.instance.pk).filter(nombre=nombre).exists():
+            raise serializers.ValidationError("El nombre del producto ya existe.")
+        return nombre
+    
+#--------------------------------Cambiar precio producto--------------------------------
+class ProductoSerializerUpdatePrecio(serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields = ['precio']
+
+    def validate_precio(self, precio):
+        if precio <= 0:
+            raise serializers.ValidationError("El precio debe ser mayor a 0.")
+        return precio
+    
+#--------------------------------Cambiar stock producto--------------------------------
+class ProductoSerializerUpdateStock(serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields = ['stock']
+
+    def validate_stock(self, stock):
+        if stock < 0:
+            raise serializers.ValidationError("El stock no puede ser negativo.")
+        return stock

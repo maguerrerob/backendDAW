@@ -12,6 +12,8 @@ from rest_framework import generics
 from rest_framework.permissions import AllowAny
 from oauth2_provider.models import AccessToken
 from django.shortcuts import get_object_or_404
+import csv
+from io import TextIOWrapper
 
 # from django.contrib.auth import get_user_model
 
@@ -87,6 +89,75 @@ def resenasProducto(request, id):
     serializer = ReseñaSerializer(reseñasProducto, many=True)
     return Response(serializer.data)
 
+
+# Importar productos desde CSV
+# Espera columnas: categoria, vendedor, nombre, precio, stock, descripcion
+# Opcional: foto (URL o path manejado aparte)
+@api_view(["POST"])
+def importarProductosCSV(request):
+    file_obj = request.FILES.get('file') # Obtiene el archivo CSV
+    if not file_obj:
+        return Response({'error': 'No se encontró el archivo CSV.'}, status=status.HTTP_400_BAD_REQUEST)
+    # Decodicar el archivo CSV a texto suando UTF-8
+    decoded_file = TextIOWrapper(file_obj.file, encoding='utf-8')
+    reader = csv.DictReader(decoded_file) # Convierte a diccionarios por fila
+
+    created = 0 # Contador de productos creados
+    errors = [] # Lista de errores por fila
+
+    # Iterar sobre cada fila del CSV
+    for idx, row in enumerate(reader, start=1):
+        try:
+            categoria_id = int(row.get('categoria', '').strip()) # Obtiene el id de la categoría
+            categoria = Categoria.objects.get(pk=categoria_id) # Verificar que la categoría existe
+            row['categoria'] = categoria.id
+        except (ValueError, KeyError, Categoria.DoesNotExist):
+            errors.append({'line': idx, 'errors': f'Categoría inválida o inexistente (ID: {row.get("categoria")})'})
+            continue
+
+        serializer = ProductoSerializer(data=row) # Intenta serializar los datos
+        if serializer.is_valid():
+            serializer.save() # Guarda el producto si es válido
+            created += 1
+        else:
+            errors.append({'line': idx, 'errors': serializer.errors}) # Agrega errores si hay
+    
+    result = {'created': created, 'errors': errors} # Resultado final
+    status_code = status.HTTP_201_CREATED if created else status.HTTP_400_BAD_REQUEST
+    return Response(result, status=status_code) # Devuelve la respuesta con el resultado
+
+
+#--------------------------------Borrar producto--------------------------------
+
+@api_view(["DELETE"])
+def borrar_producto(request, id):
+    producto = Producto.objects.get(id=id)
+    try:
+        producto.delete()
+        return Response({"mensaje": "Producto eliminado correctamente."}, status=status.HTTP_200_OK)
+    except Producto.DoesNotExist:
+        return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as error:
+        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+#---------------------------------PATCH producto--------------------------------
+
+@api_view(["PATCH"])
+def cambiarNombre_producto(request, id):
+    # Vista para cambiar el nombre de un producto
+    try:
+        producto = Producto.objects.get(pk=id)
+    except Producto.DoesNotExist:
+        return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+    
+    
+    serializers = ProductoSerializerUpdateNombre(instance=producto, data=request.data, partial=True)
+    if serializers.is_valid():
+        serializers.save()
+        return Response(serializers.data, status=status.HTTP_200_OK)
+    
+    return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 
