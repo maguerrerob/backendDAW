@@ -48,6 +48,28 @@ class ReseñaSerializer(serializers.ModelSerializer):
         model = Reseña
         fields = '__all__'
 
+class ResenaSerializerCreate(serializers.Serializer):
+    comentario = serializers.CharField()
+    puntuacion = serializers.IntegerField(required=False)
+    foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
+    # fecha_creacion = serializers.DateTimeField()
+
+    def validate_comentario(self, comentario):
+        if len(comentario) > 250:
+            raise serializers.ValidationError("El comentario no puede exceder los 250 carácteres.")
+        return comentario
+    
+    def validate_puntuacion(self, puntuacion):
+        if puntuacion < 0 or puntuacion > 5:
+            raise serializers.ValidationError("La puntuación debe estar entre 1 y 5.")
+        return puntuacion
+    
+    # def validate_fecha_creacion(self, fecha_creacion):
+    #     if fecha_creacion > timezone.now():
+    #         raise serializers.ValidationError("La fecha de creación no puede ser futura.")
+    #     return fecha_creacion
+    
+
 class PuntajeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reseña
@@ -125,3 +147,13 @@ class ProductoSerializerUpdateStock(serializers.ModelSerializer):
         if stock < 0:
             raise serializers.ValidationError("El stock no puede ser negativo.")
         return stock
+    
+
+#--------------------------------Crear compra--------------------------------
+class CompraCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Compra
+        fields = ['producto', 'cliente',
+                  'estado', 'cantidad',
+                  'fecha', 'total',
+                  'n_pedido']

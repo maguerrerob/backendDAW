@@ -3,7 +3,6 @@ from . import views
 
 urlpatterns = [
     # path('puntuacionReseñas/<int:id>/', views.returnmediaReseñas), # Por terminar
-    path('resenasProducto/<int:id>', views.resenasProducto),
     path('obtenerUsuario/<str:token>', views.obtener_usuario_token),
     path('registrarUsuario/', views.registrar_usuario.as_view()),
     path('categorias/', views.obtener_categorias.as_view()),
@@ -17,4 +16,10 @@ urlpatterns = [
     path('delProducto/<int:id>', views.borrar_producto),
     # Actualizar nombre producto
     path('updateNombre/<int:id>', views.cambiarNombre_producto),
+    #--------Reseñas--------
+    path('listResenasProduct/<int:id>', views.listResenasProduct.as_view()),
+    path('postResena/<int:id>', views.post_resena),
+    #--------Compra---------
+    path('comprarProducto/', views.comprar_producto)
 ]
+

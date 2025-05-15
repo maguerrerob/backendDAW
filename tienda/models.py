@@ -63,8 +63,8 @@ class Reseña(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     comentario = models.TextField()
-    fecha_creacion = models.DateTimeField(default=timezone.now)
-    puntuacion = models.PositiveSmallIntegerField(default=1)
+    # fecha_creacion = models.DateTimeField(default=timezone.now)
+    puntuacion = models.IntegerField()
     foto = models.ImageField(upload_to='fotos/', null=True, blank=True)
 
     def __str__(self):
