@@ -22,4 +22,3 @@ urlpatterns = [
     #--------Compra---------
     path('comprarProducto/', views.comprar_producto)
 ]
-

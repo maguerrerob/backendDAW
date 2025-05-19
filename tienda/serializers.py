@@ -30,7 +30,7 @@ class ProductoSerializer(serializers.ModelSerializer):
     categoria = serializers.PrimaryKeyRelatedField(
         queryset=Categoria.objects.all()  # Valida PK de categoría
     )
-    foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
+    # foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
     class Meta:
         model = Producto
         fields = [
@@ -156,4 +156,4 @@ class CompraCreateSerializer(serializers.ModelSerializer):
         fields = ['producto', 'cliente',
                   'estado', 'cantidad',
                   'fecha', 'total',
-                  'n_pedido']
+                  'n_pedido', 'direccion']

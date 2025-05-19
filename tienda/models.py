@@ -31,6 +31,7 @@ class Administrador(models.Model):
 
 class Cliente(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete = models.CASCADE)
+    compra = models
 
     def __str__(self):
         return self.usuario.username
@@ -46,18 +47,45 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+class Estado(models.Model):
+    nombre = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.nombre
+    
+def upload_path(instance, filename):
+    return '/'.join(['imageProducts', str(instance.nombre), filename])
 
 class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    clientes = models.ManyToManyField(Cliente, through='Compra')
     nombre = models.CharField(max_length=100)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField()
     descripcion = models.TextField()
-    foto = models.ImageField(upload_to='fotos/', null=True, blank=True)
+    foto = models.ImageField(upload_to=upload_path, null=True, blank=True)
 
     def __str__(self):
         return self.nombre
+    
+class Compra(models.Model):
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    producto = models.ManyToManyField(Producto, through='ProductoCompra')
+    estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
+    fecha = models.DateTimeField(default=timezone.now)
+    totalCompra = models.DecimalField(max_digits=10, decimal_places=2)
+    direccion = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return f"{self.producto.nombre} - {self.cliente.usuario.username}"
+    
+class ProductoCompra(models.Model):
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    compra = models.ForeignKey(Compra, on_delete=models.CASCADE)
+    cantidad = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.producto.nombre} - {self.compra.cliente.usuario.username}"
     
 class Reseña(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
@@ -70,20 +98,17 @@ class Reseña(models.Model):
     def __str__(self):
         return self.comentario
     
-class Estado(models.Model):
-    nombre = models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.nombre
+
     
-class Compra(models.Model):
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
-    cantidad = models.PositiveIntegerField()
-    fecha = models.DateTimeField(default=timezone.now)
-    total = models.DecimalField(max_digits=10, decimal_places=2)
-    n_pedido = models.PositiveIntegerField()
+# class Compra(models.Model):
+#     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+#     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+#     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
+#     cantidad = models.PositiveIntegerField()
+#     fecha = models.DateTimeField(default=timezone.now)
+#     total = models.DecimalField(max_digits=10, decimal_places=2)
+#     direccion = models.CharField(max_length=255, blank=True)
 
-    def __str__(self):
-        return f"{self.producto.nombre} - {self.cliente.usuario.username}"
+#     def __str__(self):
+#         return f"{self.producto.nombre} - {self.cliente.usuario.username}"

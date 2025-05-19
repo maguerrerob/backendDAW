@@ -84,7 +84,7 @@ def importarProductosCSV(request):
         file_obj = request.FILES.get('file') # Obtiene el archivo CSV
         if not file_obj:
             return Response({'error': 'No se encontró el archivo CSV.'}, status=status.HTTP_400_BAD_REQUEST)
-        # Decodicar el archivo CSV a texto suando UTF-8
+        # Decodicar el archivo CSV a texto usando UTF-8
         decoded_file = TextIOWrapper(file_obj.file, encoding='utf-8')
         reader = csv.DictReader(decoded_file) # Convierte a diccionarios por fila
 
