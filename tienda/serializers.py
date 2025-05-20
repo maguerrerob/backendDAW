@@ -1,35 +1,45 @@
 from rest_framework import serializers
 from .models import *
 
+#--------------------------------Modelos--------------------------------
+
+#Usuario
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
         fields = '__all__'
 
+#Administrador
 class AdministradorSerializer(serializers.ModelSerializer):
+    # No se puede usar el serializer de Usuario porque no tiene el campo telefono
     class Meta:
         model = Administrador
         fields = '__all__'
 
+#Cliente
 class ClienteSerializer(serializers.ModelSerializer):
+    usuario = UsuarioSerializer()
+    #No se puede usar el serializer de Usuario porque no tiene el campo telefono
     class Meta:
         model = Cliente
         fields = '__all__'
 
+#Vendedor
 class VendedorSerializer(serializers.ModelSerializer):
+    #No se puede usar el serializer de Usuario porque no tiene el campo telefono
     class Meta:
         model = Vendedor
         fields = '__all__'
 
+#Categoria
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
         fields = '__all__'
 
+#Producto
 class ProductoSerializer(serializers.ModelSerializer):
-    categoria = serializers.PrimaryKeyRelatedField(
-        queryset=Categoria.objects.all()  # Valida PK de categoría
-    )
+    categoria = CategoriaSerializer()
     # foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
     class Meta:
         model = Producto
@@ -43,48 +53,45 @@ class ProductoSerializer(serializers.ModelSerializer):
             'foto',
         ]
 
-class ReseñaSerializer(serializers.ModelSerializer):    
+#Reseña
+class ReseñaSerializer(serializers.ModelSerializer):
+    producto = ProductoSerializer()
+    cliente = ClienteSerializer()
     class Meta:
         model = Reseña
         fields = '__all__'
 
-class ResenaSerializerCreate(serializers.Serializer):
-    comentario = serializers.CharField()
-    puntuacion = serializers.IntegerField(required=False)
-    foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
-    # fecha_creacion = serializers.DateTimeField()
-
-    def validate_comentario(self, comentario):
-        if len(comentario) > 250:
-            raise serializers.ValidationError("El comentario no puede exceder los 250 carácteres.")
-        return comentario
-    
-    def validate_puntuacion(self, puntuacion):
-        if puntuacion < 0 or puntuacion > 5:
-            raise serializers.ValidationError("La puntuación debe estar entre 1 y 5.")
-        return puntuacion
-    
-    # def validate_fecha_creacion(self, fecha_creacion):
-    #     if fecha_creacion > timezone.now():
-    #         raise serializers.ValidationError("La fecha de creación no puede ser futura.")
-    #     return fecha_creacion
-    
-
-class PuntajeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Reseña
-        fields = ['puntuacion']
-
+#Estado
 class EstadoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Estado
         fields = '__all__'
 
+#ProductoCompra
+class ProductoCompraSerializer(serializers.ModelSerializer):
+    producto = ProductoSerializer()
+    
+    class Meta:
+        model = ProductoCompra
+        fields = '__all__'
+
+#Compra
 class CompraSerializer(serializers.ModelSerializer):
+    cliente = ClienteSerializer()
+    estado = EstadoSerializer()
+    producto = ProductoCompraSerializer(many=True, source='productocompra_set')
+    
     class Meta:
         model = Compra
         fields = '__all__'
 
+
+
+
+
+#--------------------------------Sesiones--------------------------------
+
+#Registro
 class UsuarioSerializerRegister(serializers.Serializer):
     first_name = serializers.CharField()
     last_name = serializers.CharField()
@@ -114,7 +121,39 @@ class UsuarioSerializerRegister(serializers.Serializer):
         return telefono
     
 
-#--------------------------------Cambiar nombre producto--------------------------------
+#--------------------------------Crear--------------------------------
+class CompraCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Compra
+        fields = ['producto', 'cliente',
+                  'estado', 'cantidad',
+                  'fecha', 'total',
+                  'n_pedido', 'direccion']
+        
+class ResenaCreateSerializer(serializers.ModelSerializer):
+    foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
+    class Meta:
+        model = Reseña
+        fields = [
+            'producto',
+            'cliente',
+            'puntuacion',
+            'comentario',
+            'foto',
+        ]
+
+    def validate_puntuacion(self, puntuacion):
+        if puntuacion < 1 or puntuacion > 5:
+            raise serializers.ValidationError("La puntuación debe estar entre 1 y 5.")
+        return puntuacion
+    
+    def validate_comentario(self, comentario):
+        if len(comentario) > 300:
+            raise serializers.ValidationError("El comentario no puede tener más de 300 caracteres.")
+        return comentario
+
+
+#--------------------------------Update--------------------------------
 class ProductoSerializerUpdateNombre(serializers.ModelSerializer):
     class Meta:
         model = Producto
@@ -126,7 +165,6 @@ class ProductoSerializerUpdateNombre(serializers.ModelSerializer):
             raise serializers.ValidationError("El nombre del producto ya existe.")
         return nombre
     
-#--------------------------------Cambiar precio producto--------------------------------
 class ProductoSerializerUpdatePrecio(serializers.ModelSerializer):
     class Meta:
         model = Producto
@@ -137,7 +175,6 @@ class ProductoSerializerUpdatePrecio(serializers.ModelSerializer):
             raise serializers.ValidationError("El precio debe ser mayor a 0.")
         return precio
     
-#--------------------------------Cambiar stock producto--------------------------------
 class ProductoSerializerUpdateStock(serializers.ModelSerializer):
     class Meta:
         model = Producto
@@ -147,13 +184,3 @@ class ProductoSerializerUpdateStock(serializers.ModelSerializer):
         if stock < 0:
             raise serializers.ValidationError("El stock no puede ser negativo.")
         return stock
-    
-
-#--------------------------------Crear compra--------------------------------
-class CompraCreateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Compra
-        fields = ['producto', 'cliente',
-                  'estado', 'cantidad',
-                  'fecha', 'total',
-                  'n_pedido', 'direccion']

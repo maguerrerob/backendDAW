@@ -14,11 +14,14 @@ from oauth2_provider.models import AccessToken
 from django.shortcuts import get_object_or_404
 import csv
 from io import TextIOWrapper
+from rest_framework import viewsets
+from django.views.decorators.csrf import csrf_exempt
 
 # from django.contrib.auth import get_user_model
 
-# Vistas Públicas
+#--------------------------------GET--------------------------------
 
+# .- Categorías
 class obtener_categorias(APIView):
     permission_classes = [AllowAny]
 
@@ -31,7 +34,8 @@ class obtener_categorias(APIView):
         except Exception as error:
             return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+# .- Productos
+#Productos de una categoría
 class list_productos_categoria(APIView):
     permission_classes = [AllowAny]
     def get(self, request, id):
@@ -46,7 +50,7 @@ class list_productos_categoria(APIView):
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+#Retornar producto por id
 class returnProducto(APIView):
     permission_classes = [AllowAny]
     def get(self, request, id):
@@ -60,7 +64,7 @@ class returnProducto(APIView):
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+#Búsqueda de productos por string
 class get_busqueda_productos(APIView):
     permission_classes = [AllowAny]
     def get(self, request, string):
@@ -73,7 +77,27 @@ class get_busqueda_productos(APIView):
             return Response({"error": "Producto no encontrado"}, status=status.HTTP_404_NOT_FOUND)
         except Exception as error:
             return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+# .- Reseñas
+# Reseñas de un producto
+class listResenasProduct(APIView):
+    permission_classes = [AllowAny]
+    def get(self, request, id):
+        # Vista para listar reseñas de un producto
+        try:
+            producto = Producto.objects.get(id=id)
+            reseñas = Reseña.objects.filter(producto=producto)
+            serializer = ReseñaSerializer(reseñas, many=True)
+            return Response(serializer.data)
+        except Producto.DoesNotExist:
+            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as error:
+            return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
 
+
+#--------------------------------POST--------------------------------
+# Crear producto
 # Importar productos desde CSV
 # Espera columnas: categoria, vendedor, nombre, precio, stock, descripcion
 # Opcional: foto (URL o path manejado aparte)
@@ -113,28 +137,104 @@ def importarProductosCSV(request):
         return Response(result, status=status_code) # Devuelve la respuesta con el resultado
     else:
         return Response({'error': 'No tienes permiso para agregar productos.'}, status=status.HTTP_403_FORBIDDEN)
+    
+# Segunda opción para importar productos desde CSV
+class ProductCreateSet(viewsets.ModelViewSet):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
 
+    def create(self, request, *args, **kwargs):
+        if request.user.has_perm('tienda.add_producto'):
+            print(request.data)
+            file_obj = request.FILES.get('file') # Obtiene el archivo CSV
+            if not file_obj:
+                return Response({'error': 'No se encontró el archivo CSV.'}, status=status.HTTP_400_BAD_REQUEST)
+            # Decodicar el archivo CSV a texto usando UTF-8
+            decoded_file = TextIOWrapper(file_obj.file, encoding='utf-8')
+            reader = csv.DictReader(decoded_file)
+            try:
+                diccionarioProducto = next(reader)
+                categoria = int(diccionarioProducto.get('categoria'))
+                nombre = diccionarioProducto.get('nombre')
+                precio = diccionarioProducto.get('precio')
+                stock =diccionarioProducto.get('stock')
+                descripcion = diccionarioProducto.get('descripcion')
+                foto = diccionarioProducto.get('foto')
 
-#--------------------------------Borrar producto--------------------------------
+                Producto.objects.create(
+                    categoria=categoria,
+                    nombre=nombre,
+                    precio=precio,
+                    stock=stock,
+                    descripcion=descripcion,
+                    foto=foto
+                )
+                return Response({"mensaje": "Producto creado correctamente."}, status=status.HTTP_201_CREATED)
+            except Exception as e:
+                return Response({'errors': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(["DELETE"])
-def borrar_producto(request, id):
-    if request.user.has_perm('tienda.delete_producto'):
-        # Vista para eliminar un producto
-        producto = Producto.objects.get(id=id)
+            errors = [] # Lista de errores por fila
+
+            serializer = ProductoSerializer(data=diccionarioProducto) # Intenta serializar los datos
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            else:
+                errors.append({'errors': serializer.errors})
+                return Response(errors, status=status.HTTP_400_BAD_REQUEST)
+
+            # categoria = request.data.get('categoria')
+            # nombre = request.data.get('nombre')
+            # precio = request.data.get('precio')
+            # stock = request.data.get('stock')
+            # descripcion = request.data.get('descripcion')
+            # foto = request.data.get('foto')
+
+            # Producto.objects.create(
+            #     categoria=categoria,
+            #     nombre=nombre,
+            #     precio=precio,
+            #     stock=stock,
+            #     descripcion=descripcion,
+            #     foto=foto
+            # )
+
+            # return Response({"mensaje": "Producto creado correctamente."}, status=status.HTTP_201_CREATED)
+        else:
+            return Response({"error": "No tienes permiso para crear productos."}, status=status.HTTP_403_FORBIDDEN)
+        
+
+# Crear reseña
+@csrf_exempt
+@api_view(["POST"])
+def post_resena(request):
+    # Obtenemos el id del cliente a partir del usuario id
+    dataCopy = request.data.copy()
+    cliente = Cliente.objects.get(usuario=dataCopy["usuario"])
+    dataCopy["cliente"] = cliente.id
+    resenaCreateSerializer = ResenaCreateSerializer(data=dataCopy)
+    if resenaCreateSerializer.is_valid():
         try:
-            producto.delete()
-            return Response({"mensaje": "Producto eliminado correctamente."}, status=status.HTTP_200_OK)
-        except Producto.DoesNotExist:
-            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+            resenaCreateSerializer.save()
+            return Response(resenaCreateSerializer.data, status=status.HTTP_201_CREATED)
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     else:
-        return Response({"error": "No tienes permiso para eliminar productos."}, status=status.HTTP_403_FORBIDDEN)
+        return Response(resenaCreateSerializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-#---------------------------------PATCH producto--------------------------------
 
+
+#--------------------------------PUT--------------------------------
+
+
+
+
+
+#--------------------------------PATCH--------------------------------
+
+# Producto
+# Cambiar nombre de un producto
 @api_view(["PATCH"])
 def cambiarNombre_producto(request, id):
     if request.user.has_perm('tienda.change_producto'):
@@ -155,8 +255,40 @@ def cambiarNombre_producto(request, id):
         return Response({"error": "No tienes permiso para cambiar el nombre del producto."}, status=status.HTTP_403_FORBIDDEN)
 
 
-# Vistas de Sesiones
 
+#--------------------------------DELETE--------------------------------
+# Producto
+@api_view(["DELETE"])
+def borrar_producto(request, id):
+    if request.user.has_perm('tienda.delete_producto'):
+        # Vista para eliminar un producto
+        producto = Producto.objects.get(id=id)
+        try:
+            producto.delete()
+            return Response({"mensaje": "Producto eliminado correctamente."}, status=status.HTTP_200_OK)
+        except Producto.DoesNotExist:
+            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as error:
+            return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    else:
+        return Response({"error": "No tienes permiso para eliminar productos."}, status=status.HTTP_403_FORBIDDEN)
+
+# Reseña
+@api_view(["DELETE"])
+def borrar_resena(request, id):
+    # Vista para eliminar una reseña
+    try:
+        resena = Reseña.objects.get(id=id)
+        resena.delete()
+        return Response({"mensaje": "Reseña eliminada correctamente."}, status=status.HTTP_200_OK)
+    except Exception as error:
+        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+#--------------------------------SESIONES--------------------------------
+
+# Obtener usuario a partir del token
 @api_view(["GET"])
 def obtener_usuario_token(request, token):
     # Vista para obtener el usuario a partir del token
@@ -171,6 +303,7 @@ def obtener_usuario_token(request, token):
         return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+# Registrar usuario
 class registrar_usuario(generics.CreateAPIView):
     serializer_class = UsuarioSerializerRegister
     permission_classes = [AllowAny]
@@ -212,90 +345,3 @@ class registrar_usuario(generics.CreateAPIView):
                 return Response(repr(error), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-#---------------------------------Reseñas--------------------------------
-
-class listResenasProduct(APIView):
-    permission_classes = [AllowAny]
-    def get(self, request, id):
-        # Vista para listar reseñas de un producto
-        try:
-            producto = Producto.objects.get(id=id)
-            reseñas = Reseña.objects.filter(producto=producto)
-            serializer = ReseñaSerializer(reseñas, many=True)
-            return Response(serializer.data)
-        except Producto.DoesNotExist:
-            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
-        except Exception as error:
-            return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-api_view(["POST"])
-def post_resena(request, idproducto):
-    # Vista para crear una reseña
-    # print(request.user)
-    # if request.user.has_perm('tienda.add_reseña'):
-    producto = Producto.objects.get(id=idproducto)
-    # usuario = Usuario.objects.get(id=request.user.id)
-    serializers = ResenaSerializerCreate(data=request.data)
-    if serializers.is_valid():
-        try:
-            resena = Reseña.create(
-                producto=producto,
-                # cliente=usuario,
-                comentario=serializers.data.get("comentario"),
-                fecha_creacion = serializers.data.get("fecha_creacion"),
-                puntuacion=serializers.data.get("valoracion")
-            )
-            resenaSerializada = ReseñaSerializer(resena)
-            return Response(resenaSerializada.data, status=status.HTTP_201_CREATED)
-        except Exception as error:
-            return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    else:
-        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
-    # else:
-    #     return Response({"error": "No tienes permiso para crear reseñas."}, status=status.HTTP_403_FORBIDDEN)
-
-
-#---------------------------------Compra--------------------------------
-api_view(["POST"])
-def comprar_producto(request):
-    # if request.user.has_perm('tienda.add_compra'):
-        # Vista para comprar un producto
-    compraCreateSerializer = CompraCreateSerializer(data=request.data)
-    if compraCreateSerializer.is_valid():
-        try:
-            compraCreateSerializer.save()
-            return Response(compraCreateSerializer.data, status=status.HTTP_201_CREATED)
-        except Exception as error:
-            return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    else:
-        return Response(compraCreateSerializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-# @api_view(["POST"])
-# def crear_reseña(request):
-#     """Vista para crear una reseña con validación de la valoración (1 a 5)."""
-#     data = request.data
-
-#     # Validar que `valoracion` esté en el rango permitido
-#     valoracion = data.get("valoracion", 1)
-#     if not (1 <= int(valoracion) <= 5):
-#         return Response({"error": "La valoración debe estar entre 1 y 5."}, status=status.HTTP_400_BAD_REQUEST)
-
-#     # Validar existencia del producto y usuario
-#     try:
-#         producto = Producto.objects.get(id=data.get("producto"))
-#         usuario = get_user_model().objects.get(id=data.get("usuario"))
-#     except (Producto.DoesNotExist, get_user_model().DoesNotExist):
-#         return Response({"error": "Producto o usuario no encontrado."}, status=status.HTTP_404_NOT_FOUND)
-
-#     # Crear y guardar la reseña
-#     reseña = Reseña.objects.create(
-#         producto=producto,
-#         usuario=usuario,
-#         comentario=data.get("comentario", ""),
-#         valoracion=valoracion
-#     )
-
-#     return Response({"mensaje": "Reseña creada correctamente.", "id": reseña.id}, status=status.HTTP_201_CREATED)

@@ -31,7 +31,6 @@ class Administrador(models.Model):
 
 class Cliente(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete = models.CASCADE)
-    compra = models
 
     def __str__(self):
         return self.usuario.username
@@ -55,7 +54,7 @@ class Estado(models.Model):
         return self.nombre
     
 def upload_path(instance, filename):
-    return '/'.join(['imageProducts', str(instance.nombre), filename])
+    return '/'.join(['imageProducts', str(instance.id), filename])
 
 class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
@@ -70,8 +69,8 @@ class Producto(models.Model):
     
 class Compra(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    producto = models.ManyToManyField(Producto, through='ProductoCompra')
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
+    producto = models.ManyToManyField(Producto, through='ProductoCompra')
     fecha = models.DateTimeField(default=timezone.now)
     totalCompra = models.DecimalField(max_digits=10, decimal_places=2)
     direccion = models.CharField(max_length=255, blank=True)

@@ -61,6 +61,10 @@ INTERNAL_IPS = ["127.0.0.1"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:4200",
+]
+
 # ACCESS_CONTROL_ALLOW_ORIGIN = "http://localhost:4200"
 
 ROOT_URLCONF = 'mysite.urls'
