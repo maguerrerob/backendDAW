@@ -205,7 +205,6 @@ class ProductCreateSet(viewsets.ModelViewSet):
         
 
 # Crear reseña
-@csrf_exempt
 @api_view(["POST"])
 def post_resena(request):
     # Obtenemos el id del cliente a partir del usuario id
@@ -221,7 +220,44 @@ def post_resena(request):
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     else:
         return Response(resenaCreateSerializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
 
+# @api_view(["POST"])
+# def post_compra(request):
+#     data = request.data
+#     try:
+#         id_cliente = Cliente.objects.get(usuario=data['cliente_id'])
+#         cliente = Cliente.object.get(id=id_cliente)
+#         estado = Estado.objects.get(id=data['estado_id'])
+#         direccion = data.get('direccion', '')
+        
+#         compra = Compra.objects.create(
+#             cliente = cliente,
+#             estado = estado,
+#             direccion = direccion,
+#             fecha=timezone.now(),
+#             totalCompra=0
+#         )
+        
+#         total = 0
+#         for item in data['productos']:
+#             producto = Producto.objects.get(id=item['id'])
+#             cantidad = item['cantidad']
+#             ProductoCompra.objects.create(
+#                 producto = producto,
+#                 compra=compra,
+#                 cantidad = cantidad
+#             )
+#             total += producto.precio * cantidad
+            
+#             # Para actualizar stock
+#             producto.stock -= cantidad
+#             producto.save
+
+#         compra.totalCompra = total
+#         compra.save()
+        
+#         return Response({})
 
 
 
@@ -260,6 +296,7 @@ def cambiarNombre_producto(request, id):
 # Producto
 @api_view(["DELETE"])
 def borrar_producto(request, id):
+    
     if request.user.has_perm('tienda.delete_producto'):
         # Vista para eliminar un producto
         producto = Producto.objects.get(id=id)
@@ -276,14 +313,23 @@ def borrar_producto(request, id):
 # Reseña
 @api_view(["DELETE"])
 def borrar_resena(request, id):
-    # Vista para eliminar una reseña
-    try:
-        resena = Reseña.objects.get(id=id)
-        resena.delete()
-        return Response({"mensaje": "Reseña eliminada correctamente."}, status=status.HTTP_200_OK)
-    except Exception as error:
-        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+    bol = request.user.has_perm('tienda.delete_reseña')
+    print(bol)
+    if request.user.has_perm('tienda.delete_reseña'):
+        
+        
+        # Vista para eliminar una reseña
+        try:
+            resena = Reseña.objects.get(id=id)
+            # if resena.user.cliente.id != request.user.cliente.id
+            #     throw error
+            # else:
+            resena.delete()
+            return Response({"mensaje": "Reseña eliminada correctamente."}, status=status.HTTP_200_OK)
+        except Exception as error:
+            return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    else:
+        return Response({"error": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)
 
 
 #--------------------------------SESIONES--------------------------------

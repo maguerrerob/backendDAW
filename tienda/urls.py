@@ -16,9 +16,9 @@ urlpatterns = [
 
     #----------------POST----------------
     # Importacion de productos CSV
-    # path('importarProductos/', views.importarProductosCSV),
+    path('importarProductos/', views.importarProductosCSV),
     # Importar con foto
-    path('importarProductos/', views.ProductCreateSet.as_view({'post': 'create'})),
+    # path('importarProductos/', views.ProductCreateSet.as_view({'post': 'create'})),
     # Crear reseña
     path('postResena/', views.post_resena),
 

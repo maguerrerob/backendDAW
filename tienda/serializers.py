@@ -89,36 +89,7 @@ class CompraSerializer(serializers.ModelSerializer):
 
 
 
-#--------------------------------Sesiones--------------------------------
 
-#Registro
-class UsuarioSerializerRegister(serializers.Serializer):
-    first_name = serializers.CharField()
-    last_name = serializers.CharField()
-    email = serializers.EmailField()
-    password1 = serializers.CharField()
-    password2 = serializers.CharField()
-    telefono = serializers.CharField()  
-    username = serializers.CharField()
-    rol = serializers.IntegerField()
-    
-    def validate_username(self, username):
-        usuario = Usuario.objects.filter(username=username).first()
-        if (not usuario is None):
-            raise serializers.ValidationError("El nombre de usuario ya existe.")
-        return username
-    
-    def validate_email(self, email):
-        emailAComprobar = Usuario.objects.filter(email=email).first()
-        if (not emailAComprobar is None):
-            raise serializers.ValidationError("El correo ya existe.")
-        return email
-    
-    def validate_telefono(self, telefono):
-        tel = Usuario.objects.filter(telefono=telefono).first()
-        if (not tel is None):
-            raise serializers.ValidationError("El telefono ya existe.")
-        return telefono
     
 
 #--------------------------------Crear--------------------------------
@@ -151,6 +122,10 @@ class ResenaCreateSerializer(serializers.ModelSerializer):
         if len(comentario) > 300:
             raise serializers.ValidationError("El comentario no puede tener más de 300 caracteres.")
         return comentario
+    
+
+# # ProductoCompra
+# class ProductoCompraCreateSerializer()
 
 
 #--------------------------------Update--------------------------------
@@ -184,3 +159,36 @@ class ProductoSerializerUpdateStock(serializers.ModelSerializer):
         if stock < 0:
             raise serializers.ValidationError("El stock no puede ser negativo.")
         return stock
+    
+    
+
+#--------------------------------Sesiones--------------------------------
+
+#Registro
+class UsuarioSerializerRegister(serializers.Serializer):
+    first_name = serializers.CharField()
+    last_name = serializers.CharField()
+    email = serializers.EmailField()
+    password1 = serializers.CharField()
+    password2 = serializers.CharField()
+    telefono = serializers.CharField()  
+    username = serializers.CharField()
+    rol = serializers.IntegerField()
+    
+    def validate_username(self, username):
+        usuario = Usuario.objects.filter(username=username).first()
+        if (not usuario is None):
+            raise serializers.ValidationError("El nombre de usuario ya existe.")
+        return username
+    
+    def validate_email(self, email):
+        emailAComprobar = Usuario.objects.filter(email=email).first()
+        if (not emailAComprobar is None):
+            raise serializers.ValidationError("El correo ya existe.")
+        return email
+    
+    def validate_telefono(self, telefono):
+        tel = Usuario.objects.filter(telefono=telefono).first()
+        if (not tel is None):
+            raise serializers.ValidationError("El telefono ya existe.")
+        return telefono
