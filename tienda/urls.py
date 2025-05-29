@@ -15,18 +15,18 @@ urlpatterns = [
     path('listResenasProduct/<int:id>', views.listResenasProduct.as_view()),
 
     #----------------POST----------------
-    # Importacion de productos CSV
-    path('importarProductos/', views.importarProductosCSV),
-    # Importar con foto
-    # path('importarProductos/', views.ProductCreateSet.as_view({'post': 'create'})),
+    # Importar productos con csv o excel
+    path('importarProductos/', views.ImportProducts.as_view()),
     # Crear reseña
     path('postResena/', views.post_resena),
-
+    path('realizarCompra/', views.post_compra),
+    
     #----------------PUT----------------
 
     #----------------PATCH----------------
     # Actualizar nombre producto
     path('updateNombre/<int:id>', views.cambiarNombre_producto),
+    path('subirFotoProducto/<int:id>', views.uploadFoto),
     
     #----------------DELETE----------------
     # Borrar producto

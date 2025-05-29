@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'corsheaders',
     'oauth2_provider',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -159,3 +160,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True

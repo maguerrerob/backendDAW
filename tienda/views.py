@@ -2,13 +2,14 @@ from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
 from .models import *
+from .resources import *
 from .serializers import *
 from rest_framework.decorators import api_view
 from .forms import *
 from django.contrib.auth.models import AbstractUser, Group
 from django.db.models import Avg
 from rest_framework.views import APIView
-from rest_framework import generics
+from rest_framework import generics, parsers
 from rest_framework.permissions import AllowAny
 from oauth2_provider.models import AccessToken
 from django.shortcuts import get_object_or_404
@@ -16,6 +17,10 @@ import csv
 from io import TextIOWrapper
 from rest_framework import viewsets
 from django.views.decorators.csrf import csrf_exempt
+import pandas as pd
+from tablib import Dataset
+from rest_framework.parsers import MultiPartParser
+
 
 # from django.contrib.auth import get_user_model
 
@@ -43,7 +48,7 @@ class list_productos_categoria(APIView):
         try:
             categoria = Categoria.objects.get(id=id)
             productos = Producto.objects.filter(categoria=categoria)
-            serializer = ProductoSerializer(productos, many=True)
+            serializer = ProductoSerializer(productos, many=True, context={'request': request})
             return Response(serializer.data)
         except Categoria.DoesNotExist:
             return Response({"error": "Categoría no encontrada."}, status=status.HTTP_404_NOT_FOUND)
@@ -57,7 +62,7 @@ class returnProducto(APIView):
         #Vista para obtener un producto por id
         try:
             producto = Producto.objects.get(id=id)
-            serializer = ProductoSerializer(producto)
+            serializer = ProductoSerializer(producto, context={'request': request})
             return Response(serializer.data)
         except Producto.DoesNotExist:
             return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
@@ -204,6 +209,51 @@ class ProductCreateSet(viewsets.ModelViewSet):
             return Response({"error": "No tienes permiso para crear productos."}, status=status.HTTP_403_FORBIDDEN)
         
 
+# Tercera opción para importar productos desde Excel
+
+class ImportProducts(generics.GenericAPIView):
+    parser_classes = [parsers.MultiPartParser]
+    
+    def post(self, request, *args, **kwargs):
+        if request.user.has_perm('tienda.add_producto'):
+            product_resource = ProductoResource()  # Crear una instancia del recurso de importación
+            
+            file  = request.FILES.get('file')  # Obtener el archivo Excel del request
+            mime_type = file.content_type  # Obtener el tipo MIME del archivo
+            
+            if mime_type in ['application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']:
+                df = pd.read_excel(file, engine='openpyxl')  # Leer el archivo Excel
+            elif mime_type == 'text/csv':
+                df = pd.read_csv(file)
+            else:
+                return Response({"error": "Formato de archivo no soportado. Usa un archivo Excel o CSV."}, status=status.HTTP_400_BAD_REQUEST)               
+
+            dataset = Dataset().load(df) # Convertir el DataFrame a un Dataset de tablib
+
+            foto_columna = None
+            if 'foto' in df.columns:
+                foto_columna = df['foto']
+
+            # Si hay columna 'foto' y es archivo, asignar archivo a cada fila del dataset
+            if foto_columna is not None:
+                for i, foto_file in enumerate(request.FILES.getlist('foto')):
+                    # Asume que los archivos se suben en el mismo orden que las filas
+                    dataset.dict[i]['foto'] = foto_file
+
+            result = product_resource.import_data(dataset, dry_run=True, raise_errors = True) # Para validar los datos antes de importarlos
+            
+            
+            if not result.has_errors():
+                result = product_resource.import_data(dataset, dry_run=False) # Importar los datos al modelo
+                return Response({"mensaje": "Productos importados correctamente."}, status=status.HTTP_201_CREATED)
+            else:
+                errors = []
+                for error in result.errors():
+                    errors.append(str(error))
+                return Response({"errors": errors}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response({"error": "No tienes permiso para importar productos."}, status=status.HTTP_403_FORBIDDEN)
+
 # Crear reseña
 @api_view(["POST"])
 def post_resena(request):
@@ -222,42 +272,56 @@ def post_resena(request):
         return Response(resenaCreateSerializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
-# @api_view(["POST"])
-# def post_compra(request):
-#     data = request.data
-#     try:
-#         id_cliente = Cliente.objects.get(usuario=data['cliente_id'])
-#         cliente = Cliente.object.get(id=id_cliente)
-#         estado = Estado.objects.get(id=data['estado_id'])
-#         direccion = data.get('direccion', '')
-        
-#         compra = Compra.objects.create(
-#             cliente = cliente,
-#             estado = estado,
-#             direccion = direccion,
-#             fecha=timezone.now(),
-#             totalCompra=0
-#         )
-        
-#         total = 0
-#         for item in data['productos']:
-#             producto = Producto.objects.get(id=item['id'])
-#             cantidad = item['cantidad']
-#             ProductoCompra.objects.create(
-#                 producto = producto,
-#                 compra=compra,
-#                 cantidad = cantidad
-#             )
-#             total += producto.precio * cantidad
-            
-#             # Para actualizar stock
-#             producto.stock -= cantidad
-#             producto.save
+# Crear compra
+@api_view(["POST"])
+def post_compra(request):
 
-#         compra.totalCompra = total
-#         compra.save()
+    
+    serializers = CompraCreateSerializer(data=request.data)
+    if serializers.is_valid():
+        try:
+            serializers.save()
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
+        except Exception as error:
+            return Response(repr(error), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    else:
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    data = request.data
+    # try:
+    #     # id_cliente = Cliente.objects.get(usuario=)
+
+    #     cliente = Cliente.object.get(usuario=data['id'])
+    #     estado = Estado.objects.get(id=data['estado_id'])
+    #     direccion = data.get('direccion', '')
         
-#         return Response({})
+    #     compra = Compra.objects.create(
+    #         cliente = cliente,
+    #         estado = estado,
+    #         direccion = direccion,
+    #         fecha=timezone.now(),
+    #         totalCompra=0
+    #     )
+        
+    #     total = 0
+    #     for item in data['productos']:
+    #         producto = Producto.objects.get(id=item['id'])
+    #         cantidad = item['cantidad']
+    #         ProductoCompra.objects.create(
+    #             producto = producto,
+    #             compra=compra,
+    #             cantidad = cantidad
+    #         )
+    #         total += producto.precio * cantidad
+            
+    #         # Para actualizar stock
+    #         producto.stock -= cantidad
+    #         producto.save
+
+    #     compra.totalCompra = total
+    #     compra.save()
+        
+    #     return Response({})
 
 
 
@@ -290,6 +354,31 @@ def cambiarNombre_producto(request, id):
     else:
         return Response({"error": "No tienes permiso para cambiar el nombre del producto."}, status=status.HTTP_403_FORBIDDEN)
 
+# Subir foto producto
+@api_view(["PATCH"])
+def uploadFoto(request, id):
+    if request.user.has_perm('tienda.change_producto'):
+        try:
+            producto = Producto.objects.get(pk=id)
+        except Producto.DoesNotExist:
+            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+        
+        serializers = ProductoSerializerUpdateFoto(
+            data=request.data,
+            instance=producto,
+            partial=True
+        )
+        if serializers.is_valid():
+            try:
+                serializers.save()
+                return Response({"success": "Foto subida con éxito"}, status=status.HTTP_200_OK)
+            except Exception as error:
+                return Response({"error": error}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response({"error": "No tienes permiso para subir fotos a productos."}, status=status.HTTP_403_FORBIDDEN)
+
 
 
 #--------------------------------DELETE--------------------------------
@@ -313,19 +402,20 @@ def borrar_producto(request, id):
 # Reseña
 @api_view(["DELETE"])
 def borrar_resena(request, id):
-    bol = request.user.has_perm('tienda.delete_reseña')
-    print(bol)
     if request.user.has_perm('tienda.delete_reseña'):
         
         
         # Vista para eliminar una reseña
         try:
             resena = Reseña.objects.get(id=id)
-            # if resena.user.cliente.id != request.user.cliente.id
-            #     throw error
-            # else:
-            resena.delete()
-            return Response({"mensaje": "Reseña eliminada correctamente."}, status=status.HTTP_200_OK)
+            print(resena.cliente.usuario.username)
+            
+            print(request.user)
+            if resena.cliente.usuario.username != request.user.username:
+                return Response({"error": "No tienes permiso para eliminar esta reseña."}, status=status.HTTP_403_FORBIDDEN)
+            else:
+                resena.delete()
+                return Response({"mensaje": "Reseña eliminada correctamente."}, status=status.HTTP_200_OK)
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     else:

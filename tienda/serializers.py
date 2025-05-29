@@ -1,5 +1,9 @@
 from rest_framework import serializers
 from .models import *
+import base64
+from drf_extra_fields.fields import Base64ImageField
+from django.core.files.base import ContentFile
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 #--------------------------------Modelos--------------------------------
 
@@ -40,6 +44,7 @@ class CategoriaSerializer(serializers.ModelSerializer):
 #Producto
 class ProductoSerializer(serializers.ModelSerializer):
     categoria = CategoriaSerializer()
+    foto = serializers.ImageField(read_only=True, use_url=True)
     # foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
     class Meta:
         model = Producto
@@ -88,18 +93,111 @@ class CompraSerializer(serializers.ModelSerializer):
 
 
 
-
-
+# Producto = categoria
+# Compra = libros
+# ProductoCompra = libros_categoria
     
 
 #--------------------------------Crear--------------------------------
+class ProductoCompraCreateSerializer(serializers.ModelSerializer):
+    producto = serializers.IntegerField()
+    
+    class Meta:
+        model = ProductoCompra
+        fields = ['producto', 'cantidad']
+
+    def validate(self, data):
+        producto = data['producto']
+        cantidad = data['cantidad']
+
+        if producto.stock < cantidad:
+            raise serializers.ValidationError("No hay suficiente stock para este producto '{producto.nombre}'.")
+        return data
+
 class CompraCreateSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Compra
-        fields = ['producto', 'cliente',
-                  'estado', 'cantidad',
-                  'fecha', 'total',
-                  'n_pedido', 'direccion']
+        fields = [
+                'estado',
+                'direccion', 'productos',
+                'cod_postal', 'ciudad'
+                ]
+        
+    def create(self, validated_data):
+        cliente_obj = Cliente.objects.get(usuario=self.initial_data['cliente'])
+        productos = self.initial_data['productos']
+
+        compra = Compra.objects.create(
+            cliente = cliente_obj,
+            estado = validated_data["estado"],
+            direccion = validated_data["direccion"],
+            cod_postal = validated_data["cod_postal"],
+            ciudad = validated_data["ciudad"],
+            fecha = timezone.now(),
+            totalCompra = 0
+        )
+
+        total = 0
+
+        for producto in productos:
+            print(producto)
+            cantidad = producto["cantidad"]
+            modelProducto = Producto.objects.get(id=producto["id"])
+            ProductoCompra.objects.create(producto=modelProducto, compra=compra, cantidad=cantidad)
+            # Para actualizar el stock
+            modelProducto.stock -= cantidad
+            modelProducto.save()
+            # Para sumar a totalCompra
+            total += float(modelProducto.precio) * cantidad
+
+        compra.totalCompra = total
+        compra.save()
+
+        return compra
+    
+
+        # productos_data = self.initial_data['productos']
+        # usuario_id = self.initial_data['usuario']
+        # estado_id = self.initial_data['estado']
+
+        # cliente = Cliente.objects.get(usuario=usuario_id)
+        # estado = Estado.objects.get(id=estado_id)
+
+        # compra = Compra.objects.create(
+        #     cliente=cliente,
+        #     estado=estado,
+        #     direccion=validated_data.get('direccion', ''),
+        #     cod_postal=validated_data.get('cod_postal', ''),
+        #     ciudad=validated_data.get('ciudad', ''),
+        #     fecha=timezone.now(),  # Asignar la fecha actual
+        #     totalCompra=0  # Inicialmente, el total será 0 y se actualizará después
+        # )
+
+        # total = 0
+
+        # for item in productos_data:
+        #     producto_id = item['producto']
+        #     cantidad = item['cantidad']
+
+        #     producto = Producto.objects.get(id=producto_id)
+        #     ProductoCompra.objects.create(
+        #         producto=producto,
+        #         compra=compra,
+        #         cantidad=cantidad
+        #     )
+
+        #     # Actualizar stock
+        #     producto.stock -= cantidad
+        #     producto.save()
+
+        #     total += float(producto.precio) * cantidad
+        
+        # compra.totalCompra = total
+        # compra.save()
+
+        # return compra
+
         
 class ResenaCreateSerializer(serializers.ModelSerializer):
     foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
@@ -128,7 +226,7 @@ class ResenaCreateSerializer(serializers.ModelSerializer):
 # class ProductoCompraCreateSerializer()
 
 
-#--------------------------------Update--------------------------------
+#--------------------------------PATCH--------------------------------
 class ProductoSerializerUpdateNombre(serializers.ModelSerializer):
     class Meta:
         model = Producto
@@ -160,7 +258,13 @@ class ProductoSerializerUpdateStock(serializers.ModelSerializer):
             raise serializers.ValidationError("El stock no puede ser negativo.")
         return stock
     
-    
+class ProductoSerializerUpdateFoto(serializers.ModelSerializer):
+    foto = serializers.ImageField(required=True)
+
+    class Meta:
+        model = Producto
+        fields = ['foto']
+
 
 #--------------------------------Sesiones--------------------------------
 

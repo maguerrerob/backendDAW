@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
+from import_export import resources
 
 # Create your models here.
 
@@ -62,18 +63,22 @@ class Producto(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField()
     descripcion = models.TextField()
-    foto = models.ImageField(upload_to=upload_path, null=True, blank=True)
+    foto = models.ImageField(null=True, upload_to=upload_path)
 
     def __str__(self):
         return self.nombre
     
+
+    
 class Compra(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
-    producto = models.ManyToManyField(Producto, through='ProductoCompra')
+    productos = models.ManyToManyField(Producto, through='ProductoCompra')
     fecha = models.DateTimeField(default=timezone.now)
     totalCompra = models.DecimalField(max_digits=10, decimal_places=2)
+    ciudad = models.CharField(max_length=100, blank=True)
     direccion = models.CharField(max_length=255, blank=True)
+    cod_postal = models.CharField(max_length=5, blank=True)
 
     def __str__(self):
         return f"{self.producto.nombre} - {self.cliente.usuario.username}"

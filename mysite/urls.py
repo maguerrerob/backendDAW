@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 # from django.http import HttpResponse
 from django.urls import include, path
+from django.conf import settings
+from django.conf.urls.static import static
 
 # def home(request):
 #     return HttpResponse("¡Hola, Django está funcionando!")
@@ -27,4 +29,4 @@ urlpatterns = [
     path("api/v1/", include("tienda.urls")),
     # path("", home),
     path('oauth2/', include('oauth2_provider.urls', namespace='oauth2_provider'))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
