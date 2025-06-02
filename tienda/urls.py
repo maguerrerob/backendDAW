@@ -13,6 +13,10 @@ urlpatterns = [
     path('productos/<str:string>', views.get_busqueda_productos.as_view()),
     # Listar reseñas de un producto
     path('listResenasProduct/<int:id>', views.listResenasProduct.as_view()),
+    # Obtener PDF de factura de compra
+    path('printPDF/<int:id>', views.printPDF),
+    # Listar compras
+    path('listCompras', views.listCompras),
 
     #----------------POST----------------
     # Importar productos con csv o excel

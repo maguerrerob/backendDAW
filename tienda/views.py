@@ -20,6 +20,11 @@ from django.views.decorators.csrf import csrf_exempt
 import pandas as pd
 from tablib import Dataset
 from rest_framework.parsers import MultiPartParser
+from django.http import FileResponse
+import io
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import mm
+from reportlab.lib.pagesizes import letter
 
 
 # from django.contrib.auth import get_user_model
@@ -76,7 +81,7 @@ class get_busqueda_productos(APIView):
         #Vusta para buscar productos por nombre
         try:
             productos = Producto.objects.filter(nombre__icontains=string)
-            serializers = ProductoSerializer(productos, many=True)
+            serializers = ProductoSerializer(productos, many=True, context={'request': request})
             return Response(serializers.data)
         except Producto.DoesNotExist:
             return Response({"error": "Producto no encontrado"}, status=status.HTTP_404_NOT_FOUND)
@@ -99,6 +104,56 @@ class listResenasProduct(APIView):
         except Exception as error:
             return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
+# .- Compra
+# Imprimir PDF de una compra
+@api_view(["GET"])
+def printPDF(request, id):
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
+    textob = c.beginText()
+    textob.setTextOrigin(mm, mm)
+    textob.setFont("Helvetica", 14)
+
+    compra = Compra.objects.get(pk=id)
+    
+    # Para crear las lineas en nuestro PDF
+    lines = []
+
+    lines.append(compra.cliente.usuario.username)
+    for producto in compra.productos.all():
+        lines.append(f"- {producto.nombre}: {producto.precio} €")
+
+    lines.append(compra.fecha)
+    lines.append(compra.totalCompra)
+    lines.append(compra.ciudad)
+    lines.append(compra.direccion)
+    lines.append(compra.cod_postal)
+    lines.append(" ")
+
+
+    # Para los loops de las instancias
+    for line in lines:
+        textob.textLine(str(line))
+
+    # Para terminar
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+
+    return FileResponse(buf, as_attachment=True, filename="pdf_factura")
+
+    # return FileResponse(buf, as_attachment=True, filename="pdf_factura")
+
+# Listar compras
+@api_view(["GET"])
+def listCompras(request):
+    try:
+        compras = Compra.objects.all()
+        serializers = CompraSerializer(compras, many=True)
+        return Response(serializers.data)
+    except Exception as error:
+        return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 #--------------------------------POST--------------------------------
