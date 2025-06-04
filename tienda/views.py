@@ -118,7 +118,6 @@ def printPDF(request, id):
 
     textob.textLine(text="FACTURA")
 
-
     # Medir la página y el texto "El Prioste"
     page_width, _ = letter
     text = "EL PRIOSTE"
@@ -140,10 +139,6 @@ def printPDF(request, id):
     # ----Pintar esas líneas en el objeto----
     for linea in primeras_lineas:
         textob.textLine(linea)
-    
-    # Dibujar la raya
-    # current_y = textob.getY()
-    # c.line(cm, current_y, page_width - cm, current_y + 5)
 
     # Avance de cursor: meter una linea en blanco para mover Dirección hacia abajo de la raya
     textob.textLine("")
@@ -154,9 +149,6 @@ def printPDF(request, id):
     c.drawString(cm + 200,              y_header, "Unidades")
     c.drawString(cm + 330,              y_header, "Precio Unitario")
     c.drawString(page_width - cm - 80,  y_header, "Precio")
-
-    # for linea in segundas_lineas:
-    #     textob.textLine(linea)
 
     c.line(cm, y_header + 15, page_width - cm, y_header + 15)
 
@@ -202,40 +194,10 @@ def printPDF(request, id):
 
     y_producto+=40
 
-
     c.setFont("Helvetica-Bold", 16)
     total = f"TOTAL: {compra.totalCompra}"
     total_width = c.stringWidth(total, "Helvetica", 16)
     c.drawString(page_width - total_width - cm, y_producto, total)
-
-
-
-    # Dejar para el final
-    # DATOS DE ENTREGA
-    # RAYA
-    # ----Líneas posteriores a la raya----
-    
-    
-
-    # # Para crear las lineas en nuestro PDF
-    # lines = []
-    # lines.append("")
-
-    # # Obtenemos el objeto para pintarlo
-    # lines.append("Fecha de factura: " + str(compra.fecha.date()))
-    # lines.append("Número de factura: " + str(compra.id))
-    # lines.append("")
-    # lines.append(compra.nombre_completo)
-    
-    # # Para pintar una raya
-    # for line in lines:
-    #     textob.textLine(line)
-    
-    # # Obtener posicion actual y dibujar la raya
-    # current_y = textob.getY()
-    # c.line(cm, current_y, page_width - cm, current_y + 5)
-
-    # lines.append("aaaaaaaaaaaa")
 
     # Para terminar
     c.drawText(textob)
