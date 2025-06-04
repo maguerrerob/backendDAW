@@ -79,6 +79,10 @@ class Compra(models.Model):
     ciudad = models.CharField(max_length=100, blank=True)
     direccion = models.CharField(max_length=255, blank=True)
     cod_postal = models.CharField(max_length=5, blank=True)
+    dni = models.CharField(max_length=9, default=True)
+    nombre_completo = models.CharField(max_length=100, default=True)
+    telefono = models.CharField(max_length=9, default=True)
+    email = models.EmailField(default=True)
 
     def __str__(self):
         return f"{self.producto.nombre} - {self.cliente.usuario.username}"

@@ -16,7 +16,7 @@ urlpatterns = [
     # Obtener PDF de factura de compra
     path('printPDF/<int:id>', views.printPDF),
     # Listar compras
-    path('listCompras', views.listCompras),
+    path('listCompras/<int:id>', views.listCompras),
 
     #----------------POST----------------
     # Importar productos con csv o excel

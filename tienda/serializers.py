@@ -121,7 +121,9 @@ class CompraCreateSerializer(serializers.ModelSerializer):
         fields = [
                 'estado',
                 'direccion', 'productos',
-                'cod_postal', 'ciudad'
+                'cod_postal', 'ciudad',
+                'nombre_completo', 'email',
+                'dni', 'telefono'
                 ]
         
     def create(self, validated_data):
@@ -135,6 +137,10 @@ class CompraCreateSerializer(serializers.ModelSerializer):
             cod_postal = validated_data["cod_postal"],
             ciudad = validated_data["ciudad"],
             fecha = timezone.now(),
+            nombre_completo = validated_data["nombre_completo"],
+            email = validated_data["email"],
+            telefono = validated_data["telefono"],
+            dni = validated_data["dni"],
             totalCompra = 0
         )
 
