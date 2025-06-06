@@ -10,3 +10,4 @@ openpyxl~=3.1.5
 # drf-extra-fields~=3.7.0
 drf-extra-fields
 reportlab~=4.4.1
+python-decouple
