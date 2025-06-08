@@ -21,11 +21,7 @@ import pandas as pd
 from tablib import Dataset
 from rest_framework.parsers import MultiPartParser
 from django.http import FileResponse, HttpResponse
-import io
-from reportlab.pdfgen import canvas
-from reportlab.lib.units import cm
-from reportlab.lib.pagesizes import letter
-
+from .helper import *
 
 # from django.contrib.auth import get_user_model
 
@@ -108,102 +104,7 @@ class listResenasProduct(APIView):
 # Imprimir PDF de una compra
 @api_view(["GET"])
 def printPDF(request, id):
-    buf = io.BytesIO()
-    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
-    textob = c.beginText()
-    
-    # Establece origen y fuente
-    textob.setTextOrigin(cm, cm)
-    textob.setFont("Helvetica", 14)
-
-    textob.textLine(text="FACTURA")
-
-    # Medir la página y el texto "El Prioste"
-    page_width, _ = letter
-    text = "EL PRIOSTE"
-    text_width = c.stringWidth(text, "Helvetica", 14)
-
-    # Escribir "El Prioste" directamente sobre el canvas (no textob)
-    c.drawString(page_width - text_width - cm, cm, text)
-
-    # ----Primeras líneas----
-    compra = Compra.objects.get(pk=id)
-    primeras_lineas = [
-        "",
-        f"Fecha de factura: {compra.fecha.date()}",
-        f"Número de factura: {compra.id}",
-        "",
-        compra.nombre_completo,
-    ]
-    
-    # ----Pintar esas líneas en el objeto----
-    for linea in primeras_lineas:
-        textob.textLine(linea)
-
-    # Avance de cursor: meter una linea en blanco para mover Dirección hacia abajo de la raya
-    textob.textLine("")
-
-    y_header = textob.getY()
-    c.setFont("Helvetica-Bold", 14)
-    c.drawString(cm,                    y_header, "Descripción")
-    c.drawString(cm + 200,              y_header, "Unidades")
-    c.drawString(cm + 330,              y_header, "Precio Unitario")
-    c.drawString(page_width - cm - 80,  y_header, "Precio")
-
-    c.line(cm, y_header + 15, page_width - cm, y_header + 15)
-
-    textob.moveCursor(0, 30)
-    c.setFont("Helvetica", 12)
-    y_producto = y_header + 30
-
-    for item in compra.productocompra_set.all():
-        producto_nombre = item.producto.nombre
-        unidades = item.cantidad
-        precio_unitario = item.producto.precio
-        precio_linea = unidades * precio_unitario
-
-        # ----Pintar cada columna con las mismas X que en el encabezado
-        c.drawString(cm,                    y_producto, producto_nombre)
-        c.drawString(cm + 200,              y_producto, str(unidades))
-        c.drawString(cm + 330,              y_producto, f"{precio_unitario:.2f}€")
-        c.drawString(page_width - cm - 80,  y_producto, f"{precio_linea:.2f}€")
-
-        y_producto += 20
-    
-    y_producto += 20
-    
-    c.setFont("Helvetica-Bold", 14)
-    c.drawString(cm, y_producto, "DATOS DE LA ENTREGA")
-
-    c.setFont("Helvetica", 12)
-    c.line(cm, y_producto + 15, page_width - cm, y_producto + 15)
-
-    y_producto += 30
-
-    segundas_lineas = [
-        f"Dirección: {compra.direccion}",
-        f"Dni: {compra.dni}",
-        f"Código postal y ciudad: {compra.cod_postal}, {compra.ciudad}",
-        f"Email: {compra.email}",
-        "",
-    ]
-
-    for line in segundas_lineas:
-        c.drawString(cm,        y_producto, line)
-        y_producto+=20
-
-    y_producto+=40
-
-    c.setFont("Helvetica-Bold", 16)
-    total = f"TOTAL: {compra.totalCompra}"
-    total_width = c.stringWidth(total, "Helvetica", 16)
-    c.drawString(page_width - total_width - cm, y_producto, total)
-
-    # Para terminar
-    c.drawText(textob)
-    c.showPage()
-    c.save()
-    buf.seek(0)
+    buf = helper.printPDF(id)
 
     return FileResponse(buf, as_attachment=True, filename="pdf_factura")
 
@@ -349,15 +250,15 @@ class ImportProducts(generics.GenericAPIView):
 
             dataset = Dataset().load(df) # Convertir el DataFrame a un Dataset de tablib
 
-            foto_columna = None
-            if 'foto' in df.columns:
-                foto_columna = df['foto']
+            # foto_columna = None
+            # if 'foto' in df.columns:
+            #     foto_columna = df['foto']
 
-            # Si hay columna 'foto' y es archivo, asignar archivo a cada fila del dataset
-            if foto_columna is not None:
-                for i, foto_file in enumerate(request.FILES.getlist('foto')):
-                    # Asume que los archivos se suben en el mismo orden que las filas
-                    dataset.dict[i]['foto'] = foto_file
+            # # Si hay columna 'foto' y es archivo, asignar archivo a cada fila del dataset
+            # if foto_columna is not None:
+            #     for i, foto_file in enumerate(request.FILES.getlist('foto')):
+            #         # Asume que los archivos se suben en el mismo orden que las filas
+            #         dataset.dict[i]['foto'] = foto_file
 
             result = product_resource.import_data(dataset, dry_run=True, raise_errors = True) # Para validar los datos antes de importarlos
             
@@ -394,8 +295,6 @@ def post_resena(request):
 # Crear compra
 @api_view(["POST"])
 def post_compra(request):
-
-    
     serializers = CompraCreateSerializer(data=request.data)
     if serializers.is_valid():
         try:
@@ -497,6 +396,31 @@ def uploadFoto(request, id):
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
     else:
         return Response({"error": "No tienes permiso para subir fotos a productos."}, status=status.HTTP_403_FORBIDDEN)
+    
+# Actualizar stock de producto
+@api_view(["PATCH"])
+def actualizarStock(request, id):
+    if request.user.has_perm('tienda.change_producto'):
+        try:
+            producto = Producto.objects.get(pk=id)
+        except Producto.DoesNotExist:
+            return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
+
+        serializers = ProductoSerializerUpdateStock(
+            data=request.data,
+            instance=producto,
+            partial=True
+        )
+        if serializers.is_valid():
+            try:
+                serializers.update(producto, serializers.validated_data)
+                return Response({"response": "Stock actualizado con éxito"}, status=status.HTTP_200_OK)
+            except Exception as error:
+                return Response({"error": error}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response({"error": "No tienes permiso para subir actualizar el stock de productos."}, status=status.HTTP_403_FORBIDDEN)
 
 
 

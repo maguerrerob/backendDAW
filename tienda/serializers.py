@@ -1,9 +1,6 @@
 from rest_framework import serializers
 from .models import *
-import base64
-from drf_extra_fields.fields import Base64ImageField
-from django.core.files.base import ContentFile
-from django.core.files.uploadedfile import InMemoryUploadedFile
+from .helper import *
 
 #--------------------------------Modelos--------------------------------
 
@@ -160,49 +157,9 @@ class CompraCreateSerializer(serializers.ModelSerializer):
         compra.totalCompra = total
         compra.save()
 
+        helper.enviar_mail(compra)
+
         return compra
-    
-
-        # productos_data = self.initial_data['productos']
-        # usuario_id = self.initial_data['usuario']
-        # estado_id = self.initial_data['estado']
-
-        # cliente = Cliente.objects.get(usuario=usuario_id)
-        # estado = Estado.objects.get(id=estado_id)
-
-        # compra = Compra.objects.create(
-        #     cliente=cliente,
-        #     estado=estado,
-        #     direccion=validated_data.get('direccion', ''),
-        #     cod_postal=validated_data.get('cod_postal', ''),
-        #     ciudad=validated_data.get('ciudad', ''),
-        #     fecha=timezone.now(),  # Asignar la fecha actual
-        #     totalCompra=0  # Inicialmente, el total será 0 y se actualizará después
-        # )
-
-        # total = 0
-
-        # for item in productos_data:
-        #     producto_id = item['producto']
-        #     cantidad = item['cantidad']
-
-        #     producto = Producto.objects.get(id=producto_id)
-        #     ProductoCompra.objects.create(
-        #         producto=producto,
-        #         compra=compra,
-        #         cantidad=cantidad
-        #     )
-
-        #     # Actualizar stock
-        #     producto.stock -= cantidad
-        #     producto.save()
-
-        #     total += float(producto.precio) * cantidad
-        
-        # compra.totalCompra = total
-        # compra.save()
-
-        # return compra
 
         
 class ResenaCreateSerializer(serializers.ModelSerializer):
@@ -263,6 +220,10 @@ class ProductoSerializerUpdateStock(serializers.ModelSerializer):
         if stock < 0:
             raise serializers.ValidationError("El stock no puede ser negativo.")
         return stock
+    
+    def update(self, instance, validated_data):
+        instance.stock += validated_data["stock"]
+        instance.save()
     
 class ProductoSerializerUpdateFoto(serializers.ModelSerializer):
     foto = serializers.ImageField(required=True)

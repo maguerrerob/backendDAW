@@ -31,6 +31,7 @@ urlpatterns = [
     # Actualizar nombre producto
     path('updateNombre/<int:id>', views.cambiarNombre_producto),
     path('subirFotoProducto/<int:id>', views.uploadFoto),
+    path('actualizarStock/<int:id>', views.actualizarStock),
     
     #----------------DELETE----------------
     # Borrar producto
