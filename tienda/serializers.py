@@ -57,7 +57,6 @@ class ProductoSerializer(serializers.ModelSerializer):
 
 #Reseña
 class ReseñaSerializer(serializers.ModelSerializer):
-    producto = ProductoSerializer()
     cliente = ClienteSerializer()
     class Meta:
         model = Reseña

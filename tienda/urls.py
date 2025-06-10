@@ -42,4 +42,5 @@ urlpatterns = [
     #----------------SESIONES----------------
     path('obtenerUsuario/<str:token>', views.obtener_usuario_token),
     path('registrarUsuario/', views.registrar_usuario.as_view()),
+    path('superRegistro/', views.superRegistro),
 ]

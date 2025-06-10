@@ -10,10 +10,12 @@ class Usuario(AbstractUser):
     ADMINISTRADOR = 1
     VENDEDOR = 2
     CLIENTE = 3
+    CREADOR = 4
     ROLES = (
         (ADMINISTRADOR, 'administrador'),
         (CLIENTE, 'cliente'),
-        (VENDEDOR, 'vendedor')
+        (VENDEDOR, 'vendedor'),
+        (CREADOR, 'creador'),
     )
     rol = models.PositiveSmallIntegerField(
         choices=ROLES,
@@ -31,6 +33,12 @@ class Administrador(models.Model):
         return self.usuario.username
 
 class Cliente(models.Model):
+    usuario = models.OneToOneField(Usuario, on_delete = models.CASCADE)
+
+    def __str__(self):
+        return self.usuario.username
+    
+class Creador(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete = models.CASCADE)
 
     def __str__(self):

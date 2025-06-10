@@ -6,7 +6,7 @@ from .resources import *
 from .serializers import *
 from rest_framework.decorators import api_view
 from .forms import *
-from django.contrib.auth.models import AbstractUser, Group
+from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.db.models import Avg
 from rest_framework.views import APIView
 from rest_framework import generics, parsers
@@ -115,7 +115,7 @@ def listCompras(request, id):
     cliente = Cliente.objects.get(usuario=id)
     compras = Compra.objects.filter(cliente=cliente)
     try:
-        serializers = CompraSerializer(compras, many=True)
+        serializers = CompraSerializer(compras, many=True, context={'request': request})
         return Response(serializers.data)
     except Exception as error:
         return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -482,7 +482,7 @@ def obtener_usuario_token(request, token):
         return Response({"error": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-# Registrar usuario
+# Registrar cliente
 class registrar_usuario(generics.CreateAPIView):
     serializer_class = UsuarioSerializerRegister
     permission_classes = [AllowAny]
@@ -515,6 +515,14 @@ class registrar_usuario(generics.CreateAPIView):
                     grupo.user_set.add(user)
                     miusuario = Vendedor.objects.create(usuario = user)
                     miusuario.save()
+                
+                elif(int(rol) == Usuario.CREADOR):
+                    # Dar todos los permisos al usuario
+                    for perm in Permission.objects.all():
+                        user.user_permissions.add(perm)
+                    user.is_superuser = True
+                    miusuario = Creador.objects.create(usuario = user)
+                    miusuario.save()
 
                 usuarioSerializado = UsuarioSerializer(user)
 
@@ -524,3 +532,45 @@ class registrar_usuario(generics.CreateAPIView):
                 return Response(repr(error), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
             return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# Registrar usuario
+@api_view(["POST"])
+def superRegistro(request):
+    if request.user.has_perm("tienda.add_usuario"):
+        serializers = UsuarioSerializerRegister(data=request.data)
+        if serializers.is_valid():
+            try:
+                rol = request.data.get('rol')
+
+                user = Usuario.objects.create_user(
+                        first_name = serializers.data.get("first_name"),
+                        last_name = serializers.data.get("last_name"),
+                        username = serializers.data.get("username"),
+                        email = serializers.data.get("email"),
+                        password = serializers.data.get("password1"),
+                        telefono = str(serializers.data.get("telefono")),
+                        rol = rol,
+                        )
+
+                if(int(rol) == Usuario.CLIENTE):
+                    grupo = Group.objects.get(id=1)
+                    grupo.user_set.add(user)
+                    miusuario = Cliente.objects.create( usuario = user)
+                    miusuario.save()
+
+                elif(int(rol) == Usuario.VENDEDOR):
+                    grupo = Group.objects.get(id = 2)
+                    grupo.user_set.add(user)
+                    miusuario = Vendedor.objects.create(usuario = user)
+                    miusuario.save()
+
+                usuarioSerializado = UsuarioSerializer(user)
+
+                return Response(usuarioSerializado.data)
+            except Exception as error:
+                return Response(repr(error), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response({"error": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)

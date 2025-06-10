@@ -14,6 +14,7 @@ misModelos = [
     Reseña,
     Estado,
     Compra,
+    Creador,
 ]
 
 admin.site.register(misModelos)

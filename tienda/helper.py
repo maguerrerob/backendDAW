@@ -73,7 +73,7 @@ class helper:
         y_producto += 20
         
         c.setFont("Helvetica-Bold", 14)
-        c.drawString(cm, y_producto, "DATOS DE LA ENTREGA")
+        c.drawString(cm, y_producto, "DATOS DE LA COMPRA")
 
         c.setFont("Helvetica", 12)
         c.line(cm, y_producto + 15, page_width - cm, y_producto + 15)
