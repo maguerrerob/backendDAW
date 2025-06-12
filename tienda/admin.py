@@ -11,7 +11,7 @@ misModelos = [
     Vendedor,
     Administrador,
     Usuario,
-    Reseña,
+    Resena,
     Estado,
     Compra,
     Creador,

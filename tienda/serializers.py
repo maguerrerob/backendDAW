@@ -56,10 +56,10 @@ class ProductoSerializer(serializers.ModelSerializer):
         ]
 
 #Reseña
-class ReseñaSerializer(serializers.ModelSerializer):
+class ResenaSerializer(serializers.ModelSerializer):
     cliente = ClienteSerializer()
     class Meta:
-        model = Reseña
+        model = Resena
         fields = '__all__'
 
 #Estado
@@ -133,6 +133,7 @@ class CompraCreateSerializer(serializers.ModelSerializer):
             cod_postal = validated_data["cod_postal"],
             ciudad = validated_data["ciudad"],
             fecha = timezone.now(),
+            
             nombre_completo = validated_data["nombre_completo"],
             email = validated_data["email"],
             telefono = validated_data["telefono"],
@@ -153,6 +154,8 @@ class CompraCreateSerializer(serializers.ModelSerializer):
             # Para sumar a totalCompra
             total += float(modelProducto.precio) * cantidad
 
+        print(productos)
+
         compra.totalCompra = total
         compra.save()
 
@@ -164,7 +167,7 @@ class CompraCreateSerializer(serializers.ModelSerializer):
 class ResenaCreateSerializer(serializers.ModelSerializer):
     foto = serializers.CharField(required=False, allow_blank=True)  # Permite que foto sea opcional
     class Meta:
-        model = Reseña
+        model = Resena
         fields = [
             'producto',
             'cliente',

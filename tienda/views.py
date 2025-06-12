@@ -92,8 +92,8 @@ class listResenasProduct(APIView):
         # Vista para listar reseñas de un producto
         try:
             producto = Producto.objects.get(id=id)
-            reseñas = Reseña.objects.filter(producto=producto)
-            serializer = ReseñaSerializer(reseñas, many=True)
+            resenas = Resena.objects.filter(producto=producto)
+            serializer = ResenaSerializer(resenas, many=True)
             return Response(serializer.data)
         except Producto.DoesNotExist:
             return Response({"error": "Producto no encontrado."}, status=status.HTTP_404_NOT_FOUND)
@@ -239,6 +239,7 @@ class ImportProducts(generics.GenericAPIView):
             product_resource = ProductoResource()  # Crear una instancia del recurso de importación
             
             file  = request.FILES.get('file')  # Obtener el archivo Excel del request
+            print(file)
             mime_type = file.content_type  # Obtener el tipo MIME del archivo
             
             if mime_type in ['application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']:
@@ -445,12 +446,10 @@ def borrar_producto(request, id):
 # Reseña
 @api_view(["DELETE"])
 def borrar_resena(request, id):
-    if request.user.has_perm('tienda.delete_reseña'):
-        
-        
+    if request.user.has_perm('tienda.delete_resena'):
         # Vista para eliminar una reseña
         try:
-            resena = Reseña.objects.get(id=id)
+            resena = Resena.objects.get(id=id)
             print(resena.cliente.usuario.username)
             
             print(request.user)

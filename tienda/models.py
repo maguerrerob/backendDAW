@@ -103,7 +103,7 @@ class ProductoCompra(models.Model):
     def __str__(self):
         return f"{self.producto.nombre} - {self.compra.cliente.usuario.username}"
     
-class Reseña(models.Model):
+class Resena(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     comentario = models.TextField()

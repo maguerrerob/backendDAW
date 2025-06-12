@@ -24,8 +24,6 @@ urlpatterns = [
     # Crear reseña
     path('postResena/', views.post_resena),
     path('realizarCompra/', views.post_compra),
-    
-    #----------------PUT----------------
 
     #----------------PATCH----------------
     # Actualizar nombre producto
