@@ -24,6 +24,3 @@ COPY . .
 
 # Exponer el puerto para Gunicorn
 EXPOSE 8000
-
-# Comando para lanzar Gunicorn
-CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
