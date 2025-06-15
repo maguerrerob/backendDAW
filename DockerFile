@@ -1,18 +1,25 @@
-FROM python:3.11
+# Imagen base ligera de Python
+FROM python:3.10-slim
 
-# No crear archivos .pyc
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Establecer variables de entorno para evitar creación de archivos .pyc y buffers
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
-# # Carpeta donde se montara la app
-# WORKDIR /app
+# Establece el directorio de trabajo
+WORKDIR /home/ubuntu/backend
 
-# Copia e instala dependencias
+# Copia e instala dependencias de Python
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia todo el proyecto
+# Copia el proyecto completo
 COPY . .
 
-# Comando para lanzar Django con gunicorn
-CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Expón el puerto 8000
+EXPOSE 8000
+
+# Establece la variable de entorno para Django
+ENV DJANGO_SETTINGS_MODULE=mysite.settings
+
+# Comando de inicio: Gunicorn con 3 workers
+CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
