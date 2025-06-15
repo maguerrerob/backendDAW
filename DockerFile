@@ -1,25 +1,28 @@
-# Imagen base ligera de Python
+# Imagen base ligera con Python 3.10
 FROM python:3.10-slim
 
-# Establecer variables de entorno para evitar creación de archivos .pyc y buffers
+# Variables de entorno recomendadas
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Establece el directorio de trabajo
-WORKDIR /home/ubuntu/backend
+# Crear el directorio de trabajo
+WORKDIR /app
 
-# Copia e instala dependencias de Python
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar requirements e instalar dependencias de Python
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el proyecto completo
+# Copiar el resto del código del proyecto
 COPY . .
 
-# Expón el puerto 8000
+# Exponer el puerto para Gunicorn
 EXPOSE 8000
 
-# Establece la variable de entorno para Django
-ENV DJANGO_SETTINGS_MODULE=mysite.settings
-
-# Comando de inicio: Gunicorn con 3 workers
+# Comando para lanzar Gunicorn
 CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
