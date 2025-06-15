@@ -1,0 +1,7432 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "categoria"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "estado"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "usuario"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "administrador"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "cliente"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "compra"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "producto"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "productocompra"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "resena"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "vendedor"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "application"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "accesstoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "grant"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "refreshtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "idtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tienda",
+        "model": "creador"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "0ewzy6ltq81sz9ly54d2j2mq7oxpl0rq",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQBNC7uEaWf_hDSc8ZLHvXiwPIkeKkQtwdR0oB7cybebOYtrXGrZclTsguTLLTb5YTPEvbC3ykdp85zG1dpsx3wo-289uM5XU97N9BTb2ONUmTvQrBCghBW23AA4mzJyCLCFoKA0SyoHLFORMSDD-MkMproS37fAHgcjez:1uPKm5:Pts-3TRY54wGTLtyfpETY4DH8l2ZgavwQ_yj0lP-DFI",
+        "expire_date": "2025-06-25T12:41:49.446Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "0u41rxrtzos9vcyqi05meyqjxo62u97c",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQBNC7uEaWf_hDSc8ZLHvXiwPIkeKkQtwdR0oB7cybebOYtrXGrZclTsguTLLTb5YTPEvbC3ykdp85zG1dpsx3wo-289uM5XU97N9BTb2ONUmTvQrBCghBW23AA4mzJyCLCFoKA0SyoHLFORMSDD-MkMproS37fAHgcjez:1uKele:5Lht0eIHNWyEf24TaE3yeVJSkb_fVA_wkQYpdzhrZak",
+        "expire_date": "2025-06-12T15:02:02.770Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "73k2gd6tavoo7wa0zaz8x8o0035tfujn",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQBNC7uEaWf_hDSc8ZLHvXiwPIkeKkQtwdR0oB7cybebOYtrXGrZclTsguTLLTb5YTPEvbC3ykdp85zG1dpsx3wo-289uM5XU97N9BTb2ONUmTvQrBCghBW23AA4mzJyCLCFoKA0SyoHLFORMSDD-MkMproS37fAHgcjez:1uOxAP:V_8UPeKDCZtcyF-SuM76kiiIWVGQam6Zk0zxm1fEuwo",
+        "expire_date": "2025-06-24T11:29:21.644Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7bi1rkvb5gh3eprs1czx8krc7jd7vaqt",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQBNC7uEaWf_hDSc8ZLHvXiwPIkeKkQtwdR0oB7cybebOYtrXGrZclTsguTLLTb5YTPEvbC3ykdp85zG1dpsx3wo-289uM5XU97N9BTb2ONUmTvQrBCghBW23AA4mzJyCLCFoKA0SyoHLFORMSDD-MkMproS37fAHgcjez:1uQSYQ:dbTT3oxMYSFHb-vaGPXH58p1ezrrQ8lgy4G86tFaU1I",
+        "expire_date": "2025-06-28T15:12:22.124Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wk9plz034113d5k09ox3pnbmeumb04fq",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQBNC7uEaWf_hDSc8ZLHvXiwPIkeKkQtwdR0oB7cybebOYtrXGrZclTsguTLLTb5YTPEvbC3ykdp85zG1dpsx3wo-289uM5XU97N9BTb2ONUmTvQrBCghBW23AA4mzJyCLCFoKA0SyoHLFORMSDD-MkMproS37fAHgcjez:1uJt7Z:c8xMpKym-v2Z_OarDdPOIyfZLhpLc3Hlud8GkTymaig",
+        "expire_date": "2025-06-10T12:09:29.109Z"
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 1,
+    "fields": {
+        "nombre": "Ropa"
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 2,
+    "fields": {
+        "nombre": "Costales"
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 3,
+    "fields": {
+        "nombre": "Inciensos y complementos"
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 4,
+    "fields": {
+        "nombre": "Souvenirs"
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 5,
+    "fields": {
+        "nombre": "Imágenes y esculturas"
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 6,
+    "fields": {
+        "nombre": "Discos"
+    }
+},
+{
+    "model": "tienda.estado",
+    "pk": 1,
+    "fields": {
+        "nombre": "En camino"
+    }
+},
+{
+    "model": "tienda.estado",
+    "pk": 2,
+    "fields": {
+        "nombre": "Entregado"
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 11,
+    "fields": {
+        "categoria": 2,
+        "nombre": "Costal de calidad",
+        "precio": "35.00",
+        "stock": 60,
+        "descripcion": "Costal  de trama simple en forma de L",
+        "foto": "imageProducts/11/elprioste_1_pT8S7Y7.png"
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 14,
+    "fields": {
+        "categoria": 3,
+        "nombre": "Incenso Gran Poder",
+        "precio": "5.50",
+        "stock": 77,
+        "descripcion": "Incienso de la hermandad del Gran Poder",
+        "foto": "imageProducts/14/incienso-gran-poder_6vhPkto.jpg"
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 19,
+    "fields": {
+        "categoria": 2,
+        "nombre": "Costal Doble Trama",
+        "precio": "35.50",
+        "stock": 100,
+        "descripcion": "Costal elaborado en doble trama",
+        "foto": "imageProducts/19/elprioste_1_A9nImQx.png"
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 20,
+    "fields": {
+        "categoria": 2,
+        "nombre": "Costal Doble Trama 2",
+        "precio": "35.50",
+        "stock": 100,
+        "descripcion": "Costal elaborado en doble trama",
+        "foto": "imageProducts/20/elprioste_1.png"
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 21,
+    "fields": {
+        "categoria": 2,
+        "nombre": "Costal Doble Trama 3",
+        "precio": "35.50",
+        "stock": 100,
+        "descripcion": "Costal elaborado en doble trama",
+        "foto": "imageProducts/21/elprioste_1.png"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 1,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T15:49:47.355Z",
+        "totalCompra": "0.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 2,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T15:50:27.203Z",
+        "totalCompra": "0.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 3,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T15:55:42.213Z",
+        "totalCompra": "0.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 4,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T15:57:52.646Z",
+        "totalCompra": "0.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 5,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T15:59:21.358Z",
+        "totalCompra": "0.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 6,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T16:04:50.033Z",
+        "totalCompra": "0.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 7,
+    "fields": {
+        "cliente": 2,
+        "estado": 1,
+        "fecha": "2025-05-29T16:30:21.497Z",
+        "totalCompra": "120.00",
+        "ciudad": "Sevilla",
+        "direccion": "Calle falsa",
+        "cod_postal": "41007",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 8,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-02T16:41:08.390Z",
+        "totalCompra": "238.00",
+        "ciudad": "",
+        "direccion": "",
+        "cod_postal": "",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 9,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-02T16:43:06.535Z",
+        "totalCompra": "30.00",
+        "ciudad": "",
+        "direccion": "",
+        "cod_postal": "",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 10,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-02T16:46:14.856Z",
+        "totalCompra": "90.00",
+        "ciudad": "Cadiz",
+        "direccion": "Calle ahora si",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 11,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-02T16:47:12.946Z",
+        "totalCompra": "60.00",
+        "ciudad": "Alava",
+        "direccion": "Calle Sin número",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 12,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-02T16:54:46.239Z",
+        "totalCompra": "60.00",
+        "ciudad": "Almeria",
+        "direccion": "dadadada",
+        "cod_postal": "41009",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 13,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-03T15:47:24.387Z",
+        "totalCompra": "417.00",
+        "ciudad": "Albacete",
+        "direccion": "Calle adios",
+        "cod_postal": "41006",
+        "dni": "True",
+        "nombre_completo": "True",
+        "telefono": "True",
+        "email": "True"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 14,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-03T15:57:27.713Z",
+        "totalCompra": "60.00",
+        "ciudad": "Alava",
+        "direccion": "Calle Hasta luego",
+        "cod_postal": "41006",
+        "dni": "67676787S",
+        "nombre_completo": "Manu Guerrero",
+        "telefono": "661565656",
+        "email": "manu@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 15,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-04T17:15:11.475Z",
+        "totalCompra": "179.00",
+        "ciudad": "Sevilla",
+        "direccion": "Ave del Paraíso",
+        "cod_postal": "41007",
+        "dni": "78126705D",
+        "nombre_completo": "Manuel Guerrero",
+        "telefono": "661232323",
+        "email": "manuel@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 16,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-06T16:46:40.789Z",
+        "totalCompra": "180.00",
+        "ciudad": "Alava",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41008",
+        "dni": "78787878S",
+        "nombre_completo": "Manuel Guerrero",
+        "telefono": "661717171",
+        "email": "manuel.guerrero.boza.al@iespoligonosur.org"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 17,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-06T18:08:00.131Z",
+        "totalCompra": "30.00",
+        "ciudad": "Alava",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "41009",
+        "dni": "78131212S",
+        "nombre_completo": "manuel guerrero",
+        "telefono": "661767676",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 18,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-06T18:21:10.152Z",
+        "totalCompra": "30.00",
+        "ciudad": "Alava",
+        "direccion": "Aveeeee",
+        "cod_postal": "41201",
+        "dni": "78787878S",
+        "nombre_completo": "manuuuu",
+        "telefono": "661767676",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 19,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-07T11:36:12.044Z",
+        "totalCompra": "90.00",
+        "ciudad": "Alava",
+        "direccion": "Ave del paraíso",
+        "cod_postal": "41006",
+        "dni": "78132323S",
+        "nombre_completo": "Manu Guerrero",
+        "telefono": "661756562",
+        "email": "manu@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 20,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-07T11:40:44.556Z",
+        "totalCompra": "30.00",
+        "ciudad": "Alava",
+        "direccion": "AAAAAAAAAAAAAAA",
+        "cod_postal": "51443",
+        "dni": "78121212S",
+        "nombre_completo": "Manu guerrerroooo",
+        "telefono": "661767676",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 21,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-07T12:02:55.417Z",
+        "totalCompra": "120.00",
+        "ciudad": "Alava",
+        "direccion": "Las Moradas",
+        "cod_postal": "41007",
+        "dni": "78121112S",
+        "nombre_completo": "Manuel Guerrero",
+        "telefono": "771676767",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 22,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:17:47.530Z",
+        "totalCompra": "238.00",
+        "ciudad": "Alava",
+        "direccion": "aveeeeee",
+        "cod_postal": "54008",
+        "dni": "78121212R",
+        "nombre_completo": "manu",
+        "telefono": "661767676",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 23,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:28:15.624Z",
+        "totalCompra": "328.00",
+        "ciudad": "Alava",
+        "direccion": "aveeeeeee",
+        "cod_postal": "45445",
+        "dni": "78161616S",
+        "nombre_completo": "manu alejandro",
+        "telefono": "661565656",
+        "email": "manuel.guerrero.boza.al@iespoligonosur.org"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 24,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:38:13.965Z",
+        "totalCompra": "119.00",
+        "ciudad": "Alava",
+        "direccion": "assss",
+        "cod_postal": "45445",
+        "dni": "78787878S",
+        "nombre_completo": "sdds",
+        "telefono": "667676767",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 25,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:41:06.846Z",
+        "totalCompra": "30.00",
+        "ciudad": "Alava",
+        "direccion": "eeeeeeeeee",
+        "cod_postal": "67667",
+        "dni": "56565656T",
+        "nombre_completo": "sdsdsdsd",
+        "telefono": "445454545",
+        "email": "manu.g@g.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 26,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:42:42.450Z",
+        "totalCompra": "30.00",
+        "ciudad": "Alava",
+        "direccion": "yyyyyyy",
+        "cod_postal": "78778",
+        "dni": "45454545T",
+        "nombre_completo": "sasas",
+        "telefono": "445454545",
+        "email": "asas.g@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 27,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:43:28.549Z",
+        "totalCompra": "238.00",
+        "ciudad": "Alava",
+        "direccion": "uuuuuu",
+        "cod_postal": "89889",
+        "dni": "78787878S",
+        "nombre_completo": "sdsd",
+        "telefono": "778787878",
+        "email": "sdsd@gg.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 28,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-08T22:55:21.582Z",
+        "totalCompra": "238.00",
+        "ciudad": "Alava",
+        "direccion": "jsjsjs",
+        "cod_postal": "45555",
+        "dni": "78787878S",
+        "nombre_completo": "dfdfdf",
+        "telefono": "778787878",
+        "email": "manuel.guerrero.boza.al@iespoligonosur.org"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 29,
+    "fields": {
+        "cliente": 6,
+        "estado": 1,
+        "fecha": "2025-06-10T15:24:40.156Z",
+        "totalCompra": "105.00",
+        "ciudad": "Alava",
+        "direccion": "gggggggg",
+        "cod_postal": "56556",
+        "dni": "78787878S",
+        "nombre_completo": "ssssss",
+        "telefono": "778787878",
+        "email": "ee@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 30,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-10T15:36:53.058Z",
+        "totalCompra": "105.00",
+        "ciudad": "Girona",
+        "direccion": "Ave del paraiso",
+        "cod_postal": "14556",
+        "dni": "78136606S",
+        "nombre_completo": "Manuel",
+        "telefono": "661787878",
+        "email": "manuel@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 31,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-10T15:39:31.164Z",
+        "totalCompra": "140.00",
+        "ciudad": "Cantabria",
+        "direccion": "jjj",
+        "cod_postal": "44554",
+        "dni": "78787878S",
+        "nombre_completo": "Manu",
+        "telefono": "8878787F",
+        "email": "mama@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 32,
+    "fields": {
+        "cliente": 5,
+        "estado": 1,
+        "fecha": "2025-06-10T16:18:48.116Z",
+        "totalCompra": "116.00",
+        "ciudad": "Cantabria",
+        "direccion": "Ave del Paraíso",
+        "cod_postal": "41009",
+        "dni": "78676767D",
+        "nombre_completo": "Juan Perez",
+        "telefono": "887878787",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 33,
+    "fields": {
+        "cliente": 5,
+        "estado": 1,
+        "fecha": "2025-06-10T17:16:43.448Z",
+        "totalCompra": "35.00",
+        "ciudad": "Cantabria",
+        "direccion": "jajajaj",
+        "cod_postal": "67787",
+        "dni": "78787878D",
+        "nombre_completo": "Msanu",
+        "telefono": "778787878",
+        "email": "kaka@gma.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 34,
+    "fields": {
+        "cliente": 7,
+        "estado": 1,
+        "fecha": "2025-06-10T18:24:27.195Z",
+        "totalCompra": "70.00",
+        "ciudad": "Valencia",
+        "direccion": "Ave del Paraíso 56",
+        "cod_postal": "41006",
+        "dni": "78123434D",
+        "nombre_completo": "Manuel Guerrero",
+        "telefono": "667151515",
+        "email": "manuel.guerrero.boza.al@iespoligonosur.org"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 35,
+    "fields": {
+        "cliente": 7,
+        "estado": 1,
+        "fecha": "2025-06-10T18:28:40.653Z",
+        "totalCompra": "210.00",
+        "ciudad": "Cuenca",
+        "direccion": "AAAA",
+        "cod_postal": "45007",
+        "dni": "67676767F",
+        "nombre_completo": "Manuel",
+        "telefono": "778787878",
+        "email": "manuel.agb96@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 36,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:34:08.960Z",
+        "totalCompra": "115.00",
+        "ciudad": "Girona",
+        "direccion": "sdsdsd",
+        "cod_postal": "45554",
+        "dni": "66767676S",
+        "nombre_completo": "asdasd",
+        "telefono": "667676767",
+        "email": "mamas@dd.cvom"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 37,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:38:00.153Z",
+        "totalCompra": "0.00",
+        "ciudad": "Mirador de Montepinar",
+        "direccion": "Ave del Paraíso 7",
+        "cod_postal": "41009",
+        "dni": "69696969X",
+        "nombre_completo": "Amador Rivas",
+        "telefono": "661696969",
+        "email": "capitansalami@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 38,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:39:57.446Z",
+        "totalCompra": "0.00",
+        "ciudad": "Mirador de Montepinar",
+        "direccion": "Ave del Paraíso 7",
+        "cod_postal": "41009",
+        "dni": "69696969X",
+        "nombre_completo": "Amador Rivas",
+        "telefono": "661696969",
+        "email": "capitansalami@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 39,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:40:02.891Z",
+        "totalCompra": "0.00",
+        "ciudad": "Mirador de Montepinar",
+        "direccion": "Ave del Paraíso 7",
+        "cod_postal": "41009",
+        "dni": "69696969X",
+        "nombre_completo": "Amador Rivas",
+        "telefono": "661696969",
+        "email": "capitansalami@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 40,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:44:46.910Z",
+        "totalCompra": "70.00",
+        "ciudad": "Alava",
+        "direccion": "hshshd",
+        "cod_postal": "67667",
+        "dni": "78787878S",
+        "nombre_completo": "asdsd",
+        "telefono": "661454545",
+        "email": "jaja@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 41,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:47:14.855Z",
+        "totalCompra": "0.00",
+        "ciudad": "Mirador de Montepinar",
+        "direccion": "Ave del Paraíso 7",
+        "cod_postal": "41009",
+        "dni": "69696969X",
+        "nombre_completo": "Amador Rivas",
+        "telefono": "661696969",
+        "email": "capitansalami@gmail.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 42,
+    "fields": {
+        "cliente": 1,
+        "estado": 1,
+        "fecha": "2025-06-11T14:52:16.799Z",
+        "totalCompra": "110.00",
+        "ciudad": "Madrid",
+        "direccion": "Av. Ejemplo 123",
+        "cod_postal": "28001",
+        "dni": "12345678A",
+        "nombre_completo": "Juan Pérez",
+        "telefono": "600123456",
+        "email": "juan@example.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 43,
+    "fields": {
+        "cliente": 6,
+        "estado": 1,
+        "fecha": "2025-06-12T13:58:32.715Z",
+        "totalCompra": "70.00",
+        "ciudad": "Granada",
+        "direccion": "sfdsdfs",
+        "cod_postal": "45556",
+        "dni": "56565656S",
+        "nombre_completo": "sdsd",
+        "telefono": "667676767",
+        "email": "mama@hg.com"
+    }
+},
+{
+    "model": "tienda.compra",
+    "pk": 44,
+    "fields": {
+        "cliente": 6,
+        "estado": 1,
+        "fecha": "2025-06-12T13:59:22.050Z",
+        "totalCompra": "86.50",
+        "ciudad": "Girona",
+        "direccion": "sfdsdfsd",
+        "cod_postal": "56667",
+        "dni": "56565656T",
+        "nombre_completo": "sxfdf",
+        "telefono": "445454545",
+        "email": "fghgh@jj.cc"
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 36,
+    "fields": {
+        "producto": 11,
+        "compra": 29,
+        "cantidad": 3
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 37,
+    "fields": {
+        "producto": 11,
+        "compra": 30,
+        "cantidad": 3
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 38,
+    "fields": {
+        "producto": 11,
+        "compra": 31,
+        "cantidad": 4
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 39,
+    "fields": {
+        "producto": 11,
+        "compra": 32,
+        "cantidad": 3
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 41,
+    "fields": {
+        "producto": 11,
+        "compra": 33,
+        "cantidad": 1
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 42,
+    "fields": {
+        "producto": 11,
+        "compra": 34,
+        "cantidad": 2
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 43,
+    "fields": {
+        "producto": 11,
+        "compra": 35,
+        "cantidad": 6
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 44,
+    "fields": {
+        "producto": 11,
+        "compra": 36,
+        "cantidad": 1
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 46,
+    "fields": {
+        "producto": 11,
+        "compra": 40,
+        "cantidad": 2
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 47,
+    "fields": {
+        "producto": 11,
+        "compra": 42,
+        "cantidad": 2
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 49,
+    "fields": {
+        "producto": 11,
+        "compra": 43,
+        "cantidad": 2
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 50,
+    "fields": {
+        "producto": 11,
+        "compra": 44,
+        "cantidad": 2
+    }
+},
+{
+    "model": "tienda.productocompra",
+    "pk": 51,
+    "fields": {
+        "producto": 14,
+        "compra": 44,
+        "cantidad": 3
+    }
+},
+{
+    "model": "tienda.resena",
+    "pk": 2,
+    "fields": {
+        "producto": 11,
+        "cliente": 1,
+        "comentario": "Muy buen costal y materiales buenos, recomiendo su compra",
+        "puntuacion": 5,
+        "foto": ""
+    }
+},
+{
+    "model": "tienda.resena",
+    "pk": 8,
+    "fields": {
+        "producto": 11,
+        "cliente": 1,
+        "comentario": "Me encantó este producto",
+        "puntuacion": 3,
+        "foto": ""
+    }
+},
+{
+    "model": "tienda.resena",
+    "pk": 9,
+    "fields": {
+        "producto": 11,
+        "cliente": 6,
+        "comentario": "No me gusto",
+        "puntuacion": 2,
+        "foto": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add categoria",
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "codename": "add_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change categoria",
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "codename": "change_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete categoria",
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "codename": "delete_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view categoria",
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "codename": "view_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add estado",
+        "content_type": [
+            "tienda",
+            "estado"
+        ],
+        "codename": "add_estado"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change estado",
+        "content_type": [
+            "tienda",
+            "estado"
+        ],
+        "codename": "change_estado"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete estado",
+        "content_type": [
+            "tienda",
+            "estado"
+        ],
+        "codename": "delete_estado"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view estado",
+        "content_type": [
+            "tienda",
+            "estado"
+        ],
+        "codename": "view_estado"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "codename": "add_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "codename": "change_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "codename": "delete_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "codename": "view_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add administrador",
+        "content_type": [
+            "tienda",
+            "administrador"
+        ],
+        "codename": "add_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change administrador",
+        "content_type": [
+            "tienda",
+            "administrador"
+        ],
+        "codename": "change_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete administrador",
+        "content_type": [
+            "tienda",
+            "administrador"
+        ],
+        "codename": "delete_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view administrador",
+        "content_type": [
+            "tienda",
+            "administrador"
+        ],
+        "codename": "view_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add cliente",
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "codename": "add_cliente"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change cliente",
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "codename": "change_cliente"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete cliente",
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "codename": "delete_cliente"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view cliente",
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "codename": "view_cliente"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add compra",
+        "content_type": [
+            "tienda",
+            "compra"
+        ],
+        "codename": "add_compra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change compra",
+        "content_type": [
+            "tienda",
+            "compra"
+        ],
+        "codename": "change_compra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete compra",
+        "content_type": [
+            "tienda",
+            "compra"
+        ],
+        "codename": "delete_compra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view compra",
+        "content_type": [
+            "tienda",
+            "compra"
+        ],
+        "codename": "view_compra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add producto",
+        "content_type": [
+            "tienda",
+            "producto"
+        ],
+        "codename": "add_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change producto",
+        "content_type": [
+            "tienda",
+            "producto"
+        ],
+        "codename": "change_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete producto",
+        "content_type": [
+            "tienda",
+            "producto"
+        ],
+        "codename": "delete_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view producto",
+        "content_type": [
+            "tienda",
+            "producto"
+        ],
+        "codename": "view_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add producto compra",
+        "content_type": [
+            "tienda",
+            "productocompra"
+        ],
+        "codename": "add_productocompra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change producto compra",
+        "content_type": [
+            "tienda",
+            "productocompra"
+        ],
+        "codename": "change_productocompra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete producto compra",
+        "content_type": [
+            "tienda",
+            "productocompra"
+        ],
+        "codename": "delete_productocompra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view producto compra",
+        "content_type": [
+            "tienda",
+            "productocompra"
+        ],
+        "codename": "view_productocompra"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add reseña",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "add_reseña"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change reseña",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "change_reseña"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete reseña",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "delete_reseña"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view reseña",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "view_reseña"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add vendedor",
+        "content_type": [
+            "tienda",
+            "vendedor"
+        ],
+        "codename": "add_vendedor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change vendedor",
+        "content_type": [
+            "tienda",
+            "vendedor"
+        ],
+        "codename": "change_vendedor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete vendedor",
+        "content_type": [
+            "tienda",
+            "vendedor"
+        ],
+        "codename": "delete_vendedor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view vendedor",
+        "content_type": [
+            "tienda",
+            "vendedor"
+        ],
+        "codename": "view_vendedor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add application",
+        "content_type": [
+            "oauth2_provider",
+            "application"
+        ],
+        "codename": "add_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change application",
+        "content_type": [
+            "oauth2_provider",
+            "application"
+        ],
+        "codename": "change_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete application",
+        "content_type": [
+            "oauth2_provider",
+            "application"
+        ],
+        "codename": "delete_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view application",
+        "content_type": [
+            "oauth2_provider",
+            "application"
+        ],
+        "codename": "view_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add access token",
+        "content_type": [
+            "oauth2_provider",
+            "accesstoken"
+        ],
+        "codename": "add_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change access token",
+        "content_type": [
+            "oauth2_provider",
+            "accesstoken"
+        ],
+        "codename": "change_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete access token",
+        "content_type": [
+            "oauth2_provider",
+            "accesstoken"
+        ],
+        "codename": "delete_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view access token",
+        "content_type": [
+            "oauth2_provider",
+            "accesstoken"
+        ],
+        "codename": "view_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add grant",
+        "content_type": [
+            "oauth2_provider",
+            "grant"
+        ],
+        "codename": "add_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change grant",
+        "content_type": [
+            "oauth2_provider",
+            "grant"
+        ],
+        "codename": "change_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete grant",
+        "content_type": [
+            "oauth2_provider",
+            "grant"
+        ],
+        "codename": "delete_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view grant",
+        "content_type": [
+            "oauth2_provider",
+            "grant"
+        ],
+        "codename": "view_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add refresh token",
+        "content_type": [
+            "oauth2_provider",
+            "refreshtoken"
+        ],
+        "codename": "add_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change refresh token",
+        "content_type": [
+            "oauth2_provider",
+            "refreshtoken"
+        ],
+        "codename": "change_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete refresh token",
+        "content_type": [
+            "oauth2_provider",
+            "refreshtoken"
+        ],
+        "codename": "delete_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view refresh token",
+        "content_type": [
+            "oauth2_provider",
+            "refreshtoken"
+        ],
+        "codename": "view_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add id token",
+        "content_type": [
+            "oauth2_provider",
+            "idtoken"
+        ],
+        "codename": "add_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change id token",
+        "content_type": [
+            "oauth2_provider",
+            "idtoken"
+        ],
+        "codename": "change_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete id token",
+        "content_type": [
+            "oauth2_provider",
+            "idtoken"
+        ],
+        "codename": "delete_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view id token",
+        "content_type": [
+            "oauth2_provider",
+            "idtoken"
+        ],
+        "codename": "view_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add creador",
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "codename": "add_creador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change creador",
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "codename": "change_creador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete creador",
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "codename": "delete_creador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view creador",
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "codename": "view_creador"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add resena",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "add_resena"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change resena",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "change_resena"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete resena",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "delete_resena"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view resena",
+        "content_type": [
+            "tienda",
+            "resena"
+        ],
+        "codename": "view_resena"
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Clientes",
+        "permissions": [
+            [
+                "add_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "change_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "delete_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "view_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "add_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "change_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "delete_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "view_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "add_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "change_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "delete_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "view_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "view_cliente",
+                "tienda",
+                "cliente"
+            ],
+            [
+                "add_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "view_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "view_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "view_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "view_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "add_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "change_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "delete_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "view_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "view_usuario",
+                "tienda",
+                "usuario"
+            ],
+            [
+                "view_vendedor",
+                "tienda",
+                "vendedor"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Vendedores",
+        "permissions": [
+            [
+                "add_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "change_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "delete_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "view_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "add_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "change_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "delete_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "view_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "add_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "change_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "delete_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "view_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "add_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "change_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "delete_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "view_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "view_cliente",
+                "tienda",
+                "cliente"
+            ],
+            [
+                "add_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "change_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "delete_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "view_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "add_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "change_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "delete_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "view_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "add_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "change_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "delete_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "view_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "add_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "change_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "delete_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "view_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "change_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "delete_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "view_resena",
+                "tienda",
+                "resena"
+            ],
+            [
+                "view_usuario",
+                "tienda",
+                "usuario"
+            ],
+            [
+                "view_vendedor",
+                "tienda",
+                "vendedor"
+            ]
+        ]
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$dMxbSe4sV3sC3wVCDvvMDG$SCwGZ8jPrdKsZHG6G6rJVZpQQJf/Wkh2Wmb8A6+KVqk=",
+        "last_login": "2025-06-14T15:12:22.119Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-05-27T12:09:24.100Z",
+        "rol": 1,
+        "telefono": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$tMWNFuHNsaWJK7wubchAl3$SXBqpuiVS/ztnUrXdBhbyZJEdG2U4FEwTvHl5azNltg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "manu",
+        "first_name": "manu",
+        "last_name": "guerrero boza",
+        "email": "manu@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-27T12:20:27.799Z",
+        "rol": 3,
+        "telefono": "661222222",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$hta3Wq2fCoXt7o9A6sVGx1$JzpWwdrSoILnztnjz7Ht5hGqSZqsMY8rFC5ZpfKf0Sw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vendedor",
+        "first_name": "vendedor",
+        "last_name": "apellidos apellidos",
+        "email": "vendedor@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-27T12:49:08.613Z",
+        "rol": 2,
+        "telefono": "661111111",
+        "groups": [
+            [
+                "Vendedores"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$OD06m8kdNRU7PnDmW6oXsg$eDgPeAaCzvVlzfUwJUtQRGFx09shmKCqACHuGWoAkzM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ana",
+        "first_name": "Ana",
+        "last_name": "Bohuele fernandez",
+        "email": "ana@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-29T15:45:37.332Z",
+        "rol": 3,
+        "telefono": "661454570",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$JOVt8X9Swgg7GSYmGIHQ2V$SZdPEP0jl7R7hLX4xjvxhjsenz4Fh1KFigBCRVe1OKg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "creador",
+        "first_name": "creador",
+        "last_name": "creador creador",
+        "email": "creador@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-10T12:26:01.326Z",
+        "rol": 4,
+        "telefono": "667787815",
+        "groups": [],
+        "user_permissions": [
+            [
+                "add_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "change_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "delete_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "view_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "view_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "view_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "view_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "change_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "delete_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "view_accesstoken",
+                "oauth2_provider",
+                "accesstoken"
+            ],
+            [
+                "add_application",
+                "oauth2_provider",
+                "application"
+            ],
+            [
+                "change_application",
+                "oauth2_provider",
+                "application"
+            ],
+            [
+                "delete_application",
+                "oauth2_provider",
+                "application"
+            ],
+            [
+                "view_application",
+                "oauth2_provider",
+                "application"
+            ],
+            [
+                "add_grant",
+                "oauth2_provider",
+                "grant"
+            ],
+            [
+                "change_grant",
+                "oauth2_provider",
+                "grant"
+            ],
+            [
+                "delete_grant",
+                "oauth2_provider",
+                "grant"
+            ],
+            [
+                "view_grant",
+                "oauth2_provider",
+                "grant"
+            ],
+            [
+                "add_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "change_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "delete_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "view_idtoken",
+                "oauth2_provider",
+                "idtoken"
+            ],
+            [
+                "add_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "change_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "delete_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "view_refreshtoken",
+                "oauth2_provider",
+                "refreshtoken"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "add_administrador",
+                "tienda",
+                "administrador"
+            ],
+            [
+                "change_administrador",
+                "tienda",
+                "administrador"
+            ],
+            [
+                "delete_administrador",
+                "tienda",
+                "administrador"
+            ],
+            [
+                "view_administrador",
+                "tienda",
+                "administrador"
+            ],
+            [
+                "add_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "change_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "delete_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "view_categoria",
+                "tienda",
+                "categoria"
+            ],
+            [
+                "add_cliente",
+                "tienda",
+                "cliente"
+            ],
+            [
+                "change_cliente",
+                "tienda",
+                "cliente"
+            ],
+            [
+                "delete_cliente",
+                "tienda",
+                "cliente"
+            ],
+            [
+                "view_cliente",
+                "tienda",
+                "cliente"
+            ],
+            [
+                "add_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "change_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "delete_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "view_compra",
+                "tienda",
+                "compra"
+            ],
+            [
+                "add_creador",
+                "tienda",
+                "creador"
+            ],
+            [
+                "change_creador",
+                "tienda",
+                "creador"
+            ],
+            [
+                "delete_creador",
+                "tienda",
+                "creador"
+            ],
+            [
+                "view_creador",
+                "tienda",
+                "creador"
+            ],
+            [
+                "add_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "change_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "delete_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "view_estado",
+                "tienda",
+                "estado"
+            ],
+            [
+                "add_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "change_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "delete_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "view_producto",
+                "tienda",
+                "producto"
+            ],
+            [
+                "add_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "change_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "delete_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "view_productocompra",
+                "tienda",
+                "productocompra"
+            ],
+            [
+                "add_reseña",
+                "tienda",
+                "resena"
+            ],
+            [
+                "change_reseña",
+                "tienda",
+                "resena"
+            ],
+            [
+                "delete_reseña",
+                "tienda",
+                "resena"
+            ],
+            [
+                "view_reseña",
+                "tienda",
+                "resena"
+            ],
+            [
+                "add_usuario",
+                "tienda",
+                "usuario"
+            ],
+            [
+                "change_usuario",
+                "tienda",
+                "usuario"
+            ],
+            [
+                "delete_usuario",
+                "tienda",
+                "usuario"
+            ],
+            [
+                "view_usuario",
+                "tienda",
+                "usuario"
+            ],
+            [
+                "add_vendedor",
+                "tienda",
+                "vendedor"
+            ],
+            [
+                "change_vendedor",
+                "tienda",
+                "vendedor"
+            ],
+            [
+                "delete_vendedor",
+                "tienda",
+                "vendedor"
+            ],
+            [
+                "view_vendedor",
+                "tienda",
+                "vendedor"
+            ]
+        ]
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$wpBzKVgLXw3TULxVwjplKU$K+t9sJaWi9/MfhhJwiCBJSJVmydkGdjCWB1f6hQlHow=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "juan",
+        "first_name": "juan",
+        "last_name": "bermu casal",
+        "email": "juan@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-10T12:40:22.570Z",
+        "rol": 3,
+        "telefono": "667141419",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$2gYLvNvSV5cdCv5qarc4l9$a4Jah0uubzC03teqVwRGdKYgaMp7OT6eUcGKGVWTUks=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pablo",
+        "first_name": "pablo",
+        "last_name": "casal bermu",
+        "email": "pablo@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-10T12:44:27.436Z",
+        "rol": 3,
+        "telefono": "665141418",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$UhGGQmqV73qnAe1N52yLLU$6qD7Z30qP5m8nDMYi3twMupYd5hvZQz6tO2SvD2MJy0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vendedorr",
+        "first_name": "vendedorr",
+        "last_name": "vendedor vendedor",
+        "email": "vendedor2@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-10T18:19:08.822Z",
+        "rol": 2,
+        "telefono": "667676767",
+        "groups": [
+            [
+                "Vendedores"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$e2AetIEmsq3zODMPm93Gfo$5O1wtsG90YEaWGjEAlksiynLZtMyQdlKMj7LkTMQ9yA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cliente",
+        "first_name": "cliente",
+        "last_name": "cliente cliente",
+        "email": "cliente@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-10T18:22:58.219Z",
+        "rol": 3,
+        "telefono": "661232323",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$mrbs1jhPK38qLKOPIZwnk5$/rA/0IsB/mmOkPw+iuX9WF4bSYL6Ra4SE+/adAwA8ZU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nuevocliente",
+        "first_name": "nuevo cliente",
+        "last_name": "apellidos cliente",
+        "email": "nuevocliente@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-11T15:39:37.076Z",
+        "rol": 3,
+        "telefono": "661565617",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$fPuLf1Iz8h4pbH5hNPtYaS$EwFB9KNJk2BSRpwDrAoep1BNTmtoS21sgjI8udm/jFk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nuevoVendedor",
+        "first_name": "nuevo vendedor",
+        "last_name": "apellidos vendedor",
+        "email": "nuevovendedor@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-11T15:42:22.788Z",
+        "rol": 2,
+        "telefono": "661561610",
+        "groups": [
+            [
+                "Vendedores"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$j5mtNKRHsCvIYwrgf50QeH$HE1vD6c25SHKDrAjbRilZF7gKg/a/5TtS34W0qrwhIM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nuevouser",
+        "first_name": "nuevouser",
+        "last_name": "jaja jaja",
+        "email": "nuevo@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-12T21:29:05.544Z",
+        "rol": 3,
+        "telefono": "661565656",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$RmZt5YbM8o4zhamLM528cr$2v/0lnfdTFgRgZzTdQr5ddz16ZQXQZE30DBjpSZROEU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "manuu",
+        "first_name": "manuu",
+        "last_name": "gg gg",
+        "email": "gg@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-14T15:46:48.629Z",
+        "rol": 3,
+        "telefono": "661767612",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$rKJWLHl0moG1Cn83NK8rB6$QbjWXwZ67G/TDWWpBausH25qO/V0sHhq1JN8Wqfo1ks=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "manuuu",
+        "first_name": "manuuu",
+        "last_name": "asas asas",
+        "email": "sdsd@dfdf.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-14T15:48:16.666Z",
+        "rol": 3,
+        "telefono": "661787878",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$PayJCqw4FGbnsev5h10JIR$vgTvn1ZopZ3weuP9FBMbWUA4fs57iVa81BjZ5o5IcaM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "manuuuu",
+        "first_name": "manuuu",
+        "last_name": "ausuas asuaus",
+        "email": "uauas@sdfdf.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-14T15:48:55.345Z",
+        "rol": 3,
+        "telefono": "445454545",
+        "groups": [
+            [
+                "Clientes"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 1,
+    "fields": {
+        "usuario": [
+            "manu"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 2,
+    "fields": {
+        "usuario": [
+            "ana"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 5,
+    "fields": {
+        "usuario": [
+            "juan"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 6,
+    "fields": {
+        "usuario": [
+            "pablo"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 7,
+    "fields": {
+        "usuario": [
+            "cliente"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 8,
+    "fields": {
+        "usuario": [
+            "nuevocliente"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 9,
+    "fields": {
+        "usuario": [
+            "nuevouser"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 10,
+    "fields": {
+        "usuario": [
+            "manuu"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 11,
+    "fields": {
+        "usuario": [
+            "manuuu"
+        ]
+    }
+},
+{
+    "model": "tienda.cliente",
+    "pk": 12,
+    "fields": {
+        "usuario": [
+            "manuuuu"
+        ]
+    }
+},
+{
+    "model": "tienda.creador",
+    "pk": 4,
+    "fields": {
+        "usuario": [
+            "creador"
+        ]
+    }
+},
+{
+    "model": "tienda.vendedor",
+    "pk": 3,
+    "fields": {
+        "usuario": [
+            "vendedor"
+        ]
+    }
+},
+{
+    "model": "tienda.vendedor",
+    "pk": 4,
+    "fields": {
+        "usuario": [
+            "vendedorr"
+        ]
+    }
+},
+{
+    "model": "tienda.vendedor",
+    "pk": 5,
+    "fields": {
+        "usuario": [
+            "nuevoVendedor"
+        ]
+    }
+},
+{
+    "model": "oauth2_provider.application",
+    "fields": {
+        "client_id": "client_id",
+        "user": [
+            "admin"
+        ],
+        "redirect_uris": "",
+        "post_logout_redirect_uris": "",
+        "client_type": "confidential",
+        "authorization_grant_type": "password",
+        "client_secret": "pbkdf2_sha256$870000$CGwfPqq8XQtvSjWmeEr2lB$5F8MXF5XATJETVeXmb/Xc/OXj5dP6oXByw5hp4NSWLw=",
+        "hash_client_secret": true,
+        "name": "tienda",
+        "skip_authorization": false,
+        "created": "2025-05-27T12:18:47.529Z",
+        "updated": "2025-05-27T12:18:47.529Z",
+        "algorithm": "",
+        "allowed_origins": ""
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "rzDUrxEzr56ouiCv0kcNv9m0RF5v6I",
+        "token_checksum": "370c9d038ac93dad24b082325653dfd44a9749cedef84bcad79d206be86fecee",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-23T04:20:29.362Z",
+        "scope": "read write groups",
+        "created": "2025-05-27T12:20:29.363Z",
+        "updated": "2025-05-27T12:20:29.363Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "qxYf9MhthEJfar7nuoxKmwncnE6lCL",
+        "token_checksum": "5b27f126b958e0652d69685ef9d1a8ba6b614a3697bdfdef0da73991a542afbc",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-23T04:20:48.156Z",
+        "scope": "read write groups",
+        "created": "2025-05-27T12:20:48.157Z",
+        "updated": "2025-05-27T12:20:48.157Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "MtxvHZyJH4tp98pd7CxRLXHVs1VaFS",
+        "token_checksum": "ae737adffe5236fac1dec85d4742f1ea68e8e4913806717a16a38ea461130b71",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-23T04:49:10.207Z",
+        "scope": "read write groups",
+        "created": "2025-05-27T12:49:10.207Z",
+        "updated": "2025-05-27T12:49:10.207Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "1hi5Cb9GV62egwAm5NSVHEKsnFHK1Z",
+        "token_checksum": "0971b6636e281ccaee3c8a8444d508ed2d38a02b3fcbc0f6dcf90a78c15bf2fc",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-23T04:49:42.791Z",
+        "scope": "read write groups",
+        "created": "2025-05-27T12:49:42.792Z",
+        "updated": "2025-05-27T12:49:42.792Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "y0F1jwAuD1cmDG7RRSMgxUPHKt2X69",
+        "token_checksum": "00e2df66fdb1d1706aa069d360cee329f50011b25b4f4c517aa0ccb2bc190444",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-23T06:52:54.185Z",
+        "scope": "read write groups",
+        "created": "2025-05-27T14:52:54.186Z",
+        "updated": "2025-05-27T14:52:54.186Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "TUr7lmSwseJXk6wwiXNGdHygoA4DXE",
+        "token_checksum": "14bd3cc4de081c037968e2b782379d8b0ba1f7e61e439dcafb48372f933a345c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-24T04:43:40.649Z",
+        "scope": "read write groups",
+        "created": "2025-05-28T12:43:40.652Z",
+        "updated": "2025-05-28T12:43:40.652Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "0lALVXQvre5dhe51K0ryTqqNtYL0uW",
+        "token_checksum": "56b2ee0b47c897ffc098a183b33f24076b998494346115cf465d3e32905002c4",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-25T05:58:02.737Z",
+        "scope": "read write groups",
+        "created": "2025-05-29T13:58:02.740Z",
+        "updated": "2025-05-29T13:58:02.740Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "source_refresh_token": null,
+        "token": "HQMjMS2t5AwrC0euGCgJN6dAlcwpGY",
+        "token_checksum": "f6a20b0f50e4fd7cbb66359de7ad3b496e8bd04dd3e01ba82998b443c370610d",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-25T07:45:39.017Z",
+        "scope": "read write groups",
+        "created": "2025-05-29T15:45:39.018Z",
+        "updated": "2025-05-29T15:45:39.018Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "source_refresh_token": null,
+        "token": "A2UkTVyQqoymqAK7S4wwwWWlYqkfE3",
+        "token_checksum": "00f19a96f9264d8b2692bcb1a1bec37d4a32965aaff9d5014f916dbab448f1d5",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-25T08:29:47.051Z",
+        "scope": "read write groups",
+        "created": "2025-05-29T16:29:47.053Z",
+        "updated": "2025-05-29T16:29:47.053Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "Umhu7cG2tv9bLhpKPobpGoKY6qP6jv",
+        "token_checksum": "f06c8abd3de9f47eb761f4ec980f5b4a024ab099627b7f1ca471339566ac9f94",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-29T04:14:19.327Z",
+        "scope": "read write groups",
+        "created": "2025-06-02T12:14:19.329Z",
+        "updated": "2025-06-02T12:14:19.329Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "2RFVuQ5xdayyjfp6uj2JqoIgIQicZD",
+        "token_checksum": "4216dc54b09c50e60df9e772dfee388ea793632b023e7804fbc7264621d8328e",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-29T04:16:44.312Z",
+        "scope": "read write groups",
+        "created": "2025-06-02T12:16:44.312Z",
+        "updated": "2025-06-02T12:16:44.312Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "GIw2JjdynkZKhtGQadSqturyGCboB4",
+        "token_checksum": "029c4b4dd78834f864ac9bf3c8eca3d3c2765aa63a2771effabec7b0296465aa",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-29T04:17:21.300Z",
+        "scope": "read write groups",
+        "created": "2025-06-02T12:17:21.301Z",
+        "updated": "2025-06-02T12:17:21.301Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "88O4VcWCEyu2UAVZi0BYtioHMFkWAi",
+        "token_checksum": "4efb1d95a8b670219e4f14fad304fccc8be6e3a26b16a3d8a2620aefce43266c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-29T04:18:36.775Z",
+        "scope": "read write groups",
+        "created": "2025-06-02T12:18:36.776Z",
+        "updated": "2025-06-02T12:18:36.776Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "f7nv5XcyRXJNce3ghyY1ihUfKA9zLS",
+        "token_checksum": "238c57a1adaeaa633c1dd9428ef757932a06f89fd942e6bc0604bdecf52afd7d",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-29T10:36:12.075Z",
+        "scope": "read write groups",
+        "created": "2025-06-02T18:36:12.172Z",
+        "updated": "2025-06-02T18:36:12.172Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "CEloVYmzfz0dfGpRdImObcfiIkeRTz",
+        "token_checksum": "ca1f8c56a5b8d65c41e3dfc7293b3d68583734155913d608d3a0d9df68d00bdd",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-30T06:29:09.479Z",
+        "scope": "read write groups",
+        "created": "2025-06-03T14:29:09.481Z",
+        "updated": "2025-06-03T14:29:09.481Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "geUi2x08o0cOTujzsv48DJNDMACd6H",
+        "token_checksum": "a440f135b720a314200a3dbb666cc2bd611066fcd2d06c62f25c7cd4286094ac",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-10-31T03:06:04.386Z",
+        "scope": "read write groups",
+        "created": "2025-06-04T11:06:04.387Z",
+        "updated": "2025-06-04T11:06:04.387Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "rY4UTPIzXGQHQqJlNj752eaSY1teuX",
+        "token_checksum": "d542a4bbc93531c35d77bda4b1a953d56628c96d7b817f1ced977739c3c61fa0",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-01T08:51:02.163Z",
+        "scope": "read write groups",
+        "created": "2025-06-05T16:51:02.164Z",
+        "updated": "2025-06-05T16:51:02.164Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "GZzKTnS4r9ZuAFMiDOWnvi00XLHOKK",
+        "token_checksum": "60850361d16b03e0d7ca43883fb8fb62440cb8cb791cb6004b87cf84be4df21a",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-02T04:18:42.184Z",
+        "scope": "read write groups",
+        "created": "2025-06-06T12:18:42.185Z",
+        "updated": "2025-06-06T12:18:42.185Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "ZBxV1PyKnD6gtheFkWuqa7qlL90orE",
+        "token_checksum": "d7bf8729de1db24cd5854e11062e6214418763754f14ba9d11686daf04a0f31d",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-02T07:43:41.752Z",
+        "scope": "read write groups",
+        "created": "2025-06-06T15:43:41.755Z",
+        "updated": "2025-06-06T15:43:41.755Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "GgovXEn1wgg7oNEFT88UlY2OOL5PGb",
+        "token_checksum": "20ebd6eab9f87300e1e763951b6ccbddfa0701c83df7b7805074699149f31d5f",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-02T08:04:01.258Z",
+        "scope": "read write groups",
+        "created": "2025-06-06T16:04:01.259Z",
+        "updated": "2025-06-06T16:04:01.259Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "xz4zBG5hIpyIHuNn2PAqFBpJ4zTmwV",
+        "token_checksum": "856fb2e9e013fb0eb414c10d131fb13375cff341f328f9261acc5d48aff65b84",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-02T10:07:15.620Z",
+        "scope": "read write groups",
+        "created": "2025-06-06T18:07:15.622Z",
+        "updated": "2025-06-06T18:07:15.622Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "jmPm7tklhYiwxYEn9aV1ywbk6fKlOJ",
+        "token_checksum": "cfa84741d8b1114a294f71202c3704776d767d8cf8a15fc7a330808e3c2cff78",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-03T03:19:00.894Z",
+        "scope": "read write groups",
+        "created": "2025-06-07T11:19:00.895Z",
+        "updated": "2025-06-07T11:19:00.895Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "jXUmygb9xMj3WARNE70LpHhEW5EwTJ",
+        "token_checksum": "9659f824d5e616684aef178a595d2778040df03dbb250f5c979f8be4d651bc5e",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-03T08:09:37.956Z",
+        "scope": "read write groups",
+        "created": "2025-06-07T16:09:37.957Z",
+        "updated": "2025-06-07T16:09:37.957Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "MQi8ozweNospuufV3w67q9Z1aTRM4q",
+        "token_checksum": "6a76bfd25b6a10464f16d809bfc877f32e85176166aa95f2217d4221ae8bd640",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-03T10:02:23.246Z",
+        "scope": "read write groups",
+        "created": "2025-06-07T18:02:23.247Z",
+        "updated": "2025-06-07T18:02:23.247Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "dBn0dbucbEP2RNsG4Oz1zWObaM5Gh3",
+        "token_checksum": "ba8594d5662b41f9a3e1cbe073280d55879eb9cb9db4b19bc6f30c4f14174cda",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-03T10:24:59.658Z",
+        "scope": "read write groups",
+        "created": "2025-06-07T18:24:59.659Z",
+        "updated": "2025-06-07T18:24:59.659Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "fCwFUgJm5bsAjzODIAaaomkanbCkw7",
+        "token_checksum": "91436e2d690e6400d439d4f5e4b216faaf7f8d093888edb08cfa7c63819d9fa1",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-04T10:03:40.248Z",
+        "scope": "read write groups",
+        "created": "2025-06-08T18:03:40.250Z",
+        "updated": "2025-06-08T18:03:40.250Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 27,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "bCduoZx26lwRQLNe3ouuJ69SlYjNYe",
+        "token_checksum": "7ac716cbe7419aff050ae82d67ed32dcdd1cc5344ccdf684d6362fa513c2d2e9",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-04T12:03:57.191Z",
+        "scope": "read write groups",
+        "created": "2025-06-08T20:03:57.194Z",
+        "updated": "2025-06-08T20:03:57.194Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 28,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "MGVW1QqLpyxWx3fGaqrCv5QNW10Vbp",
+        "token_checksum": "35dc0c6220f2d04eb44fbd01f2ef1ed4e0075043fbc8162087d0d3165d050523",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-04T14:30:27.439Z",
+        "scope": "read write groups",
+        "created": "2025-06-08T22:30:27.440Z",
+        "updated": "2025-06-08T22:30:27.440Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 29,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "source_refresh_token": null,
+        "token": "9YWYGOT3jKLsFVrA3fCd1Sm4J8KRRR",
+        "token_checksum": "92f6e686314ff9ac71bef890145668993e88b08b02b08420e92d243b1bd90b15",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-04T14:52:33.127Z",
+        "scope": "read write groups",
+        "created": "2025-06-08T22:52:33.128Z",
+        "updated": "2025-06-08T22:52:33.128Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 30,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "axzC4ezkuYgrceHdQL4rxQ5ir6PsZB",
+        "token_checksum": "60a649c10f4a749865132b4e997c62749abb8975b9c9753aadfc2da94fb995bf",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-04T14:54:07.120Z",
+        "scope": "read write groups",
+        "created": "2025-06-08T22:54:07.121Z",
+        "updated": "2025-06-08T22:54:07.121Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 31,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "RF0P2sTHzcCuL0vrwBnWLE8YX37eWU",
+        "token_checksum": "f038979ec193e1878708f67e58cb609710cb26b66a5bbbcbe818dc4be7e7e446",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-04T14:55:35.710Z",
+        "scope": "read write groups",
+        "created": "2025-06-08T22:55:35.710Z",
+        "updated": "2025-06-08T22:55:35.710Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 32,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "ZbaFTYFrxBbE6RMIFGDICUG3QzPA4J",
+        "token_checksum": "7462c5696f9f54b329e30fc9402d26ebb0a7702f802a67aadb10314c13646901",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-05T02:54:06.319Z",
+        "scope": "read write groups",
+        "created": "2025-06-09T10:54:06.321Z",
+        "updated": "2025-06-09T10:54:06.321Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 33,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "B52hHgsXvj367SVUPheR2q1Zcty4nU",
+        "token_checksum": "abd5753ca4962ea3ee86d8df1e11e1caca691a618f2548642a725e0cefc1a11f",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-05T10:33:33.825Z",
+        "scope": "read write groups",
+        "created": "2025-06-09T18:33:33.827Z",
+        "updated": "2025-06-09T18:33:33.827Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 34,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "qkuS2U7DLwTSef8kK2mxRbniThMtBc",
+        "token_checksum": "5c1555bf57933839f0ec9180eaade06852feca00669e1e9f251536222165812c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-05T10:40:24.720Z",
+        "scope": "read write groups",
+        "created": "2025-06-09T18:40:24.721Z",
+        "updated": "2025-06-09T18:40:24.721Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 35,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "PAmqL7LTbUBjIyRhjQjMlolytJ0tUt",
+        "token_checksum": "deacdcf1b40d6b65d4dc1ad3c776a80e19d26b8291603a31589cb005a530b6b0",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-05T10:48:23.351Z",
+        "scope": "read write groups",
+        "created": "2025-06-09T18:48:23.352Z",
+        "updated": "2025-06-09T18:48:23.352Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 36,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "source_refresh_token": null,
+        "token": "4SdstN2WigSSVlNaiSIfhwaDPxgM00",
+        "token_checksum": "f751b24bcc5da0a9e62cc6c758a2ac437d9e03398548b1fc34bcdfdf1bf3c9cb",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T03:38:10.530Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T11:38:10.532Z",
+        "updated": "2025-06-10T11:38:10.532Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 37,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "7vYW8JPg5zbW2Q8ILArcBYiSs1CJVG",
+        "token_checksum": "0138a3077b3397c229e3e7d0edb3cfdb80bc58ef04724e7a508a0d927e915d50",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T03:47:10.036Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T11:47:10.037Z",
+        "updated": "2025-06-10T11:47:10.037Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 38,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "source_refresh_token": null,
+        "token": "diF6ZgKS1S10an0fXwCec2XJddetlC",
+        "token_checksum": "f4d18f4d3733f16b8b12f6060852dc2a2b8e67427bee9c84e888432535a5b76f",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T04:11:31.619Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T12:11:31.620Z",
+        "updated": "2025-06-10T12:11:31.620Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 39,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "hqiw8kYaN8vufjqfs7beBEn4Pg92FM",
+        "token_checksum": "a59a67b27a978a9fd4bc02f9660c0aefb4497426397d1cd2d3a65c6cffbe4a7f",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T04:26:03.439Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T12:26:03.439Z",
+        "updated": "2025-06-10T12:26:03.439Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 40,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "mpXwc3ZeTUCUOHjqsWmM7oBLtorLim",
+        "token_checksum": "18ccfa589c7e9ba0be40ab8d3daab4253ba88f5cfe19e279cd842bc1f95357cc",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T04:26:26.970Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T12:26:26.970Z",
+        "updated": "2025-06-10T12:26:26.970Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 41,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "Mk3ONN4ZJxdMCnaqWl9G18LNrTAtXO",
+        "token_checksum": "09e4e9fcf553579ea31b887adc8337ac21b2895892d9b14752f1e58267cd6cd2",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T04:44:57.901Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T12:44:57.901Z",
+        "updated": "2025-06-10T12:44:57.901Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 42,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "GhNRsflUtwAxOjxQ6eszg3plceHv1b",
+        "token_checksum": "903b0eabc75f3b1fc93441e3c4939095e051d84f843f5b083f9a2f36d04e1936",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T04:49:04.557Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T12:49:04.558Z",
+        "updated": "2025-06-10T12:49:04.558Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 43,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "Vi2F4Uu4yyDyx0IujvOUVkBuYMwQ2q",
+        "token_checksum": "ec8217c01fa6d258983007910bcf1c6471e44db176e402748e279968b56d1ae2",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T04:50:03.602Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T12:50:03.603Z",
+        "updated": "2025-06-10T12:50:03.603Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 44,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "zt8t3M2SLCUJdVbvhEQqq0Sn3vggQa",
+        "token_checksum": "be6c292efa67371c6f0973d2df58a0657bc2977f77daf0ae2ac1f31dd3cf0c62",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T05:03:59.234Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T13:03:59.235Z",
+        "updated": "2025-06-10T13:03:59.235Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 45,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "q9jNjvmcfdf48j5RyDF81mW8geeQBb",
+        "token_checksum": "53ee5685f87e3896f03fd575ff4c9c2b81cdfc6a9fe45da848d2cc70f3dac6ee",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T05:05:06.320Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T13:05:06.320Z",
+        "updated": "2025-06-10T13:05:06.320Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 46,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "9k0ni3Wu8o3GnWwnR6pS60OufkErH6",
+        "token_checksum": "f1ca3ea98fbf232682a3540b7d789c6449b8a352761a4c338d6598d50660c236",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T05:07:36.346Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T13:07:36.346Z",
+        "updated": "2025-06-10T13:07:36.346Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 47,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "GSMXOuc63f7zXNI6uO1Qo2FzjAhhie",
+        "token_checksum": "ad92a090664ee0200cb5253ee506e1a87df1d24ae8c9293bb26055cee82543c7",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T05:12:21.518Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T13:12:21.519Z",
+        "updated": "2025-06-10T13:12:21.519Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 48,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "Mp85ImWJds5044o0aEwaGkVoWU4Fd2",
+        "token_checksum": "15db10fc60a704a0f302c21ee80cab284b3688a6f5798d9a860e50c4465dbccc",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T07:35:18.687Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T15:35:18.688Z",
+        "updated": "2025-06-10T15:35:18.688Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 49,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "VDTSm0416L1PadLY82MnGtBuB70p3t",
+        "token_checksum": "a643cf3d9c35635ddfc4021b7a9c4963455447c6fe57e512a6455d0072dca978",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T07:38:49.392Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T15:38:49.392Z",
+        "updated": "2025-06-10T15:38:49.392Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 50,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "w3NMAFN5p4kC1doyPHrn8e0gmzwY7V",
+        "token_checksum": "96f23fd16311e3dc63978504dd422c03a96b6aeaaf3a07ed914386a0fb4c900b",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T08:08:48.868Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T16:08:48.869Z",
+        "updated": "2025-06-10T16:08:48.869Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 51,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "FgHzuKMNGyHojQgSMajxhS6sQ70CBA",
+        "token_checksum": "ed64712a7c673e960965e0ba6898b95432bf841651ffcf5a4624d70b878cdec0",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T08:14:42.128Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T16:14:42.129Z",
+        "updated": "2025-06-10T16:14:42.129Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 52,
+    "fields": {
+        "user": [
+            "juan"
+        ],
+        "source_refresh_token": null,
+        "token": "vArcdogQN26zckvJTEx9LykO9Zhq2E",
+        "token_checksum": "5db091f4d71f5ad5b62b6e04abaf7c856cfc10917ae6f3c75b1c4e2f61fb872c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T08:15:09.391Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T16:15:09.391Z",
+        "updated": "2025-06-10T16:15:09.391Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 53,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "TANdfTBe18g1znFxXQoLMygcE7wplK",
+        "token_checksum": "965f43eb416a930b705fc7d7c0e8762fbe4fd61dd779fc78f44be1f67af19d46",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T08:16:18.088Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T16:16:18.088Z",
+        "updated": "2025-06-10T16:16:18.088Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 54,
+    "fields": {
+        "user": [
+            "juan"
+        ],
+        "source_refresh_token": null,
+        "token": "YVV8W0fooM2bmZBJKIzjyYvZwPZnX8",
+        "token_checksum": "5d7ea045c6ec6c56d5e968e4044985f1272694796c5132f738ef18a2d4bc071c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T08:17:40.135Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T16:17:40.135Z",
+        "updated": "2025-06-10T16:17:40.135Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 55,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "K0kpjcK2pZsGBEvQdzTIdPNgjPusb8",
+        "token_checksum": "a88d0810e283f56f25fb5d585fc0ab06e943ce95a2ab0aa66c902c7418d8024f",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T09:34:28.841Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T17:34:28.842Z",
+        "updated": "2025-06-10T17:34:28.842Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 56,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "u9n4mlUh1JfC6c3vphPGnz9KpEbjge",
+        "token_checksum": "7b2b3ff5f376522395a632824ed2b33ec7e4eec1c0d506be1c4ab6caacac80d0",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T09:35:16.381Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T17:35:16.382Z",
+        "updated": "2025-06-10T17:35:16.382Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 57,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "oxbZcmvUquyTel0NWUAz8qPI48MyZP",
+        "token_checksum": "097d2361ee00ee44bf942c5a7be8093820229bb51d327c925418259624d68037",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T09:36:35.697Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T17:36:35.697Z",
+        "updated": "2025-06-10T17:36:35.697Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 58,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "Z2bqme4MashDa3la6GtZvSONOTV2uj",
+        "token_checksum": "449aca1f6dfe9596ce4dc0224c090895a6cb5e43705e526fd83f4400891be006",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T10:09:04.413Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T18:09:04.413Z",
+        "updated": "2025-06-10T18:09:04.413Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 59,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "XCiqZiMpkNVJQ1SUG0yeiC99VaXxSS",
+        "token_checksum": "67816f1bbf3a1029c1c8df60956f37d68bfb16b4ac3bdd7ba42a357dd73fcb04",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T10:11:53.720Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T18:11:53.721Z",
+        "updated": "2025-06-10T18:11:53.721Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 60,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "oemmGViz1EjNhEar2jcjRRgWzLM8wg",
+        "token_checksum": "58d6befc195f77cb589624c743631909ff441487a183b0d424ab50d59f930bee",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T10:15:04.931Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T18:15:04.932Z",
+        "updated": "2025-06-10T18:15:04.932Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 61,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "NPy6rX56pS24WnWQUTTetI0WhnAv8Q",
+        "token_checksum": "81154bb33738cf37c373ddbed9bf39ca9a22028d995319694045dd4734db44de",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T10:17:44.909Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T18:17:44.909Z",
+        "updated": "2025-06-10T18:17:44.909Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 62,
+    "fields": {
+        "user": [
+            "vendedorr"
+        ],
+        "source_refresh_token": null,
+        "token": "YQkbzJxf9NSDzA91M70F1LM4DprXT3",
+        "token_checksum": "a9672c051194ed4896dfc103a9c79211a32300c88d655b749445253793427152",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T10:19:35.405Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T18:19:35.405Z",
+        "updated": "2025-06-10T18:19:35.405Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 63,
+    "fields": {
+        "user": [
+            "cliente"
+        ],
+        "source_refresh_token": null,
+        "token": "2q6TIuLI0o9DDCn2w0pGR5Jbs0uZTP",
+        "token_checksum": "2115cce360e716135e3136ad7eb82169a577068c4cdf8b97e722764afebc70b1",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-06T10:22:59.718Z",
+        "scope": "read write groups",
+        "created": "2025-06-10T18:22:59.719Z",
+        "updated": "2025-06-10T18:22:59.719Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 64,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "b6scrYRgQr5d9J1dBbXn0wkDEgiwh7",
+        "token_checksum": "ae568e9ad1e488f722967621cce8d3f6c8f0a8a60f3aef329e31adcdf9ee6751",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T04:29:55.157Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T12:29:55.157Z",
+        "updated": "2025-06-11T12:29:55.157Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 65,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "i62LmEpfRALHHagQP518Vk8BUAsBcF",
+        "token_checksum": "04f040104aedc5c920fe64a516ad06d991fa69a9e5b7e5c85f433176a97a57d3",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T04:36:28.270Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T12:36:28.270Z",
+        "updated": "2025-06-11T12:36:28.270Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 66,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "yGwNiQ2JpZav3nMxd3TCKggccSIaTd",
+        "token_checksum": "7bbf7c62e6de11672c700ce9477c6433ff27be34b162bbe61e6eade9f45f6244",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T05:04:28.415Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T13:04:28.416Z",
+        "updated": "2025-06-11T13:04:28.416Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 67,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "tVAHZgC8p9lWCdgUc45Whpeo7SEJGF",
+        "token_checksum": "7f226d335afade7a25b5c28122329817ec5dc732bf922119fdca10b6f212232e",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T06:28:04.088Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T14:28:04.090Z",
+        "updated": "2025-06-11T14:28:04.090Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 68,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "ed4vMsN4AeOZBVSCe6kYqbrGBA0K3W",
+        "token_checksum": "2730e25157935e1fd9d91426544ff418635243608dc4bb50eba3a46858785ca4",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T06:33:30.104Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T14:33:30.106Z",
+        "updated": "2025-06-11T14:33:30.106Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 69,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "MmKWbvG6ysSo8a3UZjQzjewDNxOM4c",
+        "token_checksum": "fdb89606187aedc975f67ccb4a4d7989a30a632edfc72b40b68a23ddd078898b",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T06:56:00.020Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T14:56:00.020Z",
+        "updated": "2025-06-11T14:56:00.020Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 70,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "owedaJv03YRllQvW2vzEkWASATrMZ3",
+        "token_checksum": "07f8db8d5c5d9591e7888a465c38b497fce219a9096e9fa9db49c9cea80cc5dd",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:06:58.899Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:06:58.899Z",
+        "updated": "2025-06-11T15:06:58.899Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 71,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "HkRss7PQ85H7aTFuix8hRfZJ6r4ECv",
+        "token_checksum": "229ef39676002b212f16ecc5217fd73c41d1eb12bacfb9d26305b93ce272dcae",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:11:12.061Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:11:12.061Z",
+        "updated": "2025-06-11T15:11:12.061Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 72,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "yIZ04lGWMbf19BkRL0SyRdHtiYmcwD",
+        "token_checksum": "85fcd7a4e61a632a95060b65d05e16510766911f46ec5d34366fb6225b6dcf7c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:13:33.102Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:13:33.102Z",
+        "updated": "2025-06-11T15:13:33.102Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 73,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "Ct0hE7j3WEx9CAyNBDtQUu02Mi3pnh",
+        "token_checksum": "fdedbb1fac5a1052d7c2cfec29dd1647ce7249c9f2c808d544a15172a5490318",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:26:45.543Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:26:45.543Z",
+        "updated": "2025-06-11T15:26:45.543Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 74,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "p6a4Cxb2dZng3YRFS5SkDa5dgPrWBF",
+        "token_checksum": "393c5c67396e4fdf74bdac6f69ac8b488221e9b8af8c943ddd8eb74575ab75ec",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:32:30.898Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:32:30.899Z",
+        "updated": "2025-06-11T15:32:30.899Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 75,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "X03dkS6rgUm16UXxhKNdijsaGHuogc",
+        "token_checksum": "6fa431114ef02526aa2e163ad067ba0ae66bcc8335af56a45358f9aa06dc24e7",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:35:53.453Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:35:53.453Z",
+        "updated": "2025-06-11T15:35:53.453Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 76,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "source_refresh_token": null,
+        "token": "9pGmPrtHkxFIvhjsDjxPlMPUMVrBvf",
+        "token_checksum": "b3023df4c45f3b1a5f4087b336de5377476d0e070406a10d6ec26073501f7056",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T07:40:55.973Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T15:40:55.974Z",
+        "updated": "2025-06-11T15:40:55.974Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 77,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "0dPtXWIUBLz0JJhJUS6CF26ilhpeNr",
+        "token_checksum": "4cd202408a590a4fca393b440b9fec3f58e1db0fe483702bc261753a2bcb498c",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T09:55:41.860Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T17:55:41.864Z",
+        "updated": "2025-06-11T17:55:41.864Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 78,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "2l7AK9FlCpVgIuZtEnabM1Eejzp7HI",
+        "token_checksum": "caade135f0cba02ff73aa0b3539cba4a3b268093cc82d1a54b1bfcc41597f616",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-07T10:32:55.050Z",
+        "scope": "read write groups",
+        "created": "2025-06-11T18:32:55.051Z",
+        "updated": "2025-06-11T18:32:55.051Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 79,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "9sBAKYGGnLqakZtq8jgyIQ07mW2lEd",
+        "token_checksum": "28fd8ff98e2af25bb145e356977118b7f3758cc506cdab6fc2097ebe986b2787",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-08T01:27:41.163Z",
+        "scope": "read write groups",
+        "created": "2025-06-12T09:27:41.164Z",
+        "updated": "2025-06-12T09:27:41.164Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 80,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "source_refresh_token": null,
+        "token": "iDrVK2w2tzofdoo3srJSOnAKHJHMjZ",
+        "token_checksum": "e43283e30d7cba7b8ab608cf7bd9e6c63fec85d940bbf4188fbf85ad0026877e",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-08T05:57:02.919Z",
+        "scope": "read write groups",
+        "created": "2025-06-12T13:57:02.919Z",
+        "updated": "2025-06-12T13:57:02.919Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 81,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "ryWoT0mNLxw4DusxyYLGygrbqKK8YN",
+        "token_checksum": "27164c1643c693243f064efc09cf826c6004d9af5e809ec4bbd70309a9b04dd9",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-08T05:57:59.439Z",
+        "scope": "read write groups",
+        "created": "2025-06-12T13:57:59.439Z",
+        "updated": "2025-06-12T13:57:59.439Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 82,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "source_refresh_token": null,
+        "token": "riMdMPCR067KgKCCumoGvUowXto8mI",
+        "token_checksum": "7911ea6b808cabe373a64e47c23dc8cb5c7fef40fe1c8c1c7d21d575ae8ebef7",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-08T06:02:31.763Z",
+        "scope": "read write groups",
+        "created": "2025-06-12T14:02:31.763Z",
+        "updated": "2025-06-12T14:02:31.763Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 83,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "source_refresh_token": null,
+        "token": "Ju4H0FwS81YZjfroGlqoTilUloEUGW",
+        "token_checksum": "3e5f47874aecf8e584783f1e6f325671cd7ac5997d454da149c7da6804addd49",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-08T06:06:23.998Z",
+        "scope": "read write groups",
+        "created": "2025-06-12T14:06:23.999Z",
+        "updated": "2025-06-12T14:06:23.999Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 84,
+    "fields": {
+        "user": [
+            "nuevouser"
+        ],
+        "source_refresh_token": null,
+        "token": "DfKYkT5AES6eeB3cvcBKMyvqPg55Uk",
+        "token_checksum": "07e4f579d6df4578f0624307630f50fd646312fff8218388047f3525fbd8c2ce",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-08T13:29:07.051Z",
+        "scope": "read write groups",
+        "created": "2025-06-12T21:29:07.052Z",
+        "updated": "2025-06-12T21:29:07.052Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 85,
+    "fields": {
+        "user": [
+            "manuu"
+        ],
+        "source_refresh_token": null,
+        "token": "yqQ9eKdt59be1ipssTMD7s4GuC1GWY",
+        "token_checksum": "e645e8d4f2e9d6265d8595f8e4717c53db065da0163f4d648338058080b8c8a3",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-10T07:46:50.212Z",
+        "scope": "read write groups",
+        "created": "2025-06-14T15:46:50.212Z",
+        "updated": "2025-06-14T15:46:50.212Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 86,
+    "fields": {
+        "user": [
+            "manuuu"
+        ],
+        "source_refresh_token": null,
+        "token": "WxlV1UHwPLzilOqD8LNadoahuGk0sv",
+        "token_checksum": "a9eee3736c55f08a425e082bcdeab86a922b3804d08e75bafd913e027285f1e4",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-10T07:48:18.196Z",
+        "scope": "read write groups",
+        "created": "2025-06-14T15:48:18.197Z",
+        "updated": "2025-06-14T15:48:18.197Z"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 87,
+    "fields": {
+        "user": [
+            "manuuuu"
+        ],
+        "source_refresh_token": null,
+        "token": "epBy0mEccPKnQrsFq43E28eC3hvMkc",
+        "token_checksum": "3388bd05338f2912126cf5505f3125a497e41a8e1932102ebb08266a3a6dbf03",
+        "id_token": null,
+        "application": [
+            "client_id"
+        ],
+        "expires": "2036-11-10T07:48:56.889Z",
+        "scope": "read write groups",
+        "created": "2025-06-14T15:48:56.890Z",
+        "updated": "2025-06-14T15:48:56.890Z"
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "zYpJ2zyJfZ67jIM4TQB3liSErKuWjq",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 1,
+        "token_family": "a9249467-9d79-4602-be44-26332667a0c8",
+        "created": "2025-05-27T12:20:29.365Z",
+        "updated": "2025-05-27T12:20:29.365Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "mFNouPCxXyulKTW3i6RK3ALv0CtRN6",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 2,
+        "token_family": "3c7d65cc-6d59-43c7-8021-9d048a0cb497",
+        "created": "2025-05-27T12:20:48.158Z",
+        "updated": "2025-05-27T12:20:48.158Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "ytKi2yEeh3J6VoTIfGRe9vgJM2TQz9",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 3,
+        "token_family": "3cd117a8-e660-422b-9074-fbaa7931cfef",
+        "created": "2025-05-27T12:49:10.208Z",
+        "updated": "2025-05-27T12:49:10.208Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "0ZpBCKUGGUk6kL63CbmA0MpE1MsStq",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 4,
+        "token_family": "a2f1b19a-7b6f-4f4a-b1d6-8f6d03bdf76a",
+        "created": "2025-05-27T12:49:42.793Z",
+        "updated": "2025-05-27T12:49:42.793Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "ZsJ0vsnKLAEb23VpoJQDIVrWoDvrqs",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 5,
+        "token_family": "d7eedd28-ef8c-4b65-96ae-968e56f93a28",
+        "created": "2025-05-27T14:52:54.188Z",
+        "updated": "2025-05-27T14:52:54.188Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "EjAOScl9KwjtcTlRJdIGOsNyXnJBby",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 6,
+        "token_family": "3ca757bb-900f-48aa-ae79-5dab1f42d664",
+        "created": "2025-05-28T12:43:40.656Z",
+        "updated": "2025-05-28T12:43:40.656Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "pkuv912EpyPtDCyRqQw8WNPTTmnyMA",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 7,
+        "token_family": "a27062b3-6d87-4e16-9639-6dac068d2524",
+        "created": "2025-05-29T13:58:02.744Z",
+        "updated": "2025-05-29T13:58:02.744Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "token": "wkqGUxHVbdz391IsZHv0TBquOivNOQ",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 8,
+        "token_family": "bef58a67-1cb5-4164-bbfe-3d5fd116ef4c",
+        "created": "2025-05-29T15:45:39.023Z",
+        "updated": "2025-05-29T15:45:39.023Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "token": "6yHWoHwvnwvlTaDrUse7xmtPaGc5nS",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 9,
+        "token_family": "57c60f05-11aa-492e-92e8-abb83f0e98f0",
+        "created": "2025-05-29T16:29:47.058Z",
+        "updated": "2025-05-29T16:29:47.058Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "sZDmTfJwBVGEJB3jNfDrGDqjC1Z5d2",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 10,
+        "token_family": "4a724085-94aa-4e4a-bcf4-2a37979d742a",
+        "created": "2025-06-02T12:14:19.334Z",
+        "updated": "2025-06-02T12:14:19.334Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "pUmTcQCr8fZDxgi3nu5o7a5uZe5Koi",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 11,
+        "token_family": "cf9f83bc-c6fe-4dd2-8f56-269a88fb57b7",
+        "created": "2025-06-02T12:16:44.314Z",
+        "updated": "2025-06-02T12:16:44.314Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "4U9VUSoL3ulCf6zRVSPe6YfJM2s2n5",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 12,
+        "token_family": "c287de9e-da85-4b9c-a663-d9d633e43441",
+        "created": "2025-06-02T12:17:21.302Z",
+        "updated": "2025-06-02T12:17:21.302Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "GU9m7XmIPCncqNTSTvDfp0DkwZbEmC",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 13,
+        "token_family": "b21e54b9-382c-48d4-8230-44495ae4eb85",
+        "created": "2025-06-02T12:18:36.777Z",
+        "updated": "2025-06-02T12:18:36.777Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "xSXwOrkZRhyoQ3PnpEreSlzazgBEd6",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 14,
+        "token_family": "1f660355-fb2f-4cfb-93fb-7d6d38e6df72",
+        "created": "2025-06-02T18:36:12.174Z",
+        "updated": "2025-06-02T18:36:12.174Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "OF5w6PAZarbPDNglIs1BSYsYG9bUsp",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 15,
+        "token_family": "7896d981-e569-4cbf-ab02-3f604c137990",
+        "created": "2025-06-03T14:29:09.486Z",
+        "updated": "2025-06-03T14:29:09.486Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "6nx71UQnBYrIzkFY74sAiE2e6yMtK2",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 16,
+        "token_family": "d8ba45d3-3e6e-4da0-b181-082109da8a96",
+        "created": "2025-06-04T11:06:04.388Z",
+        "updated": "2025-06-04T11:06:04.388Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "jnxf9GSIHcLyS3YgHyZrleinCGoU5V",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 17,
+        "token_family": "b8af10b3-35ac-44f6-bade-645b93fa8ecc",
+        "created": "2025-06-05T16:51:02.167Z",
+        "updated": "2025-06-05T16:51:02.167Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "JPSzFunoKV25FZXLAVRDwzP4eymOcC",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 18,
+        "token_family": "0c8cacf6-05f9-4383-928a-edb27c49ce0a",
+        "created": "2025-06-06T12:18:42.188Z",
+        "updated": "2025-06-06T12:18:42.188Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "rwBYTt8V5xkmZivrGqBRKfrTrWqlpN",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 19,
+        "token_family": "0fe87c73-cca5-4106-bea5-b9b5086485e8",
+        "created": "2025-06-06T15:43:41.758Z",
+        "updated": "2025-06-06T15:43:41.758Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "soSKrUjRaQkHCJf6lRj8V93Tyd1Hd2",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 20,
+        "token_family": "ff0b3bc8-84cf-4e1a-b99b-c09290a3f982",
+        "created": "2025-06-06T16:04:01.261Z",
+        "updated": "2025-06-06T16:04:01.261Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "nAUYa5VzfGKXOnq8aQGTgA0wgnODDe",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 21,
+        "token_family": "9d6ecc73-5214-4b34-add7-42742a1cb2aa",
+        "created": "2025-06-06T18:07:15.625Z",
+        "updated": "2025-06-06T18:07:15.625Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "ny2bj7PpwUUg7BBQ4FUSsvxzojbAA7",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 22,
+        "token_family": "ad9fa49d-85e8-4be3-a4a2-023453f312fb",
+        "created": "2025-06-07T11:19:00.896Z",
+        "updated": "2025-06-07T11:19:00.896Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "eGay2q3MbCNXTKonskZ4wc5gcebnZG",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 23,
+        "token_family": "1a9dd253-2e72-4179-8d2a-aff3ce03522f",
+        "created": "2025-06-07T16:09:37.958Z",
+        "updated": "2025-06-07T16:09:37.958Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "3ItqdHttgO7DIruSqxeAlmP6rdMZzL",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 24,
+        "token_family": "43ed4070-a2ef-4296-a9cd-702443462ad7",
+        "created": "2025-06-07T18:02:23.249Z",
+        "updated": "2025-06-07T18:02:23.249Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "sN9hEdX2ESFwWJUxl6EPaqcEKEYsx6",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 25,
+        "token_family": "bb66e82e-4083-4f33-b17e-9d35ebc78c5c",
+        "created": "2025-06-07T18:24:59.660Z",
+        "updated": "2025-06-07T18:24:59.660Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "qd9YZZSwGuudLQetSERvl5vT9TQJG5",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 26,
+        "token_family": "68c80340-13e0-483e-ac20-0e3c9b7a95ea",
+        "created": "2025-06-08T18:03:40.253Z",
+        "updated": "2025-06-08T18:03:40.253Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 27,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "2nJIrRcKzllsD6RH9LDU9ZMVPBZapy",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 27,
+        "token_family": "dda624fd-c65d-4926-8c3f-e10451d0a7cd",
+        "created": "2025-06-08T20:03:57.196Z",
+        "updated": "2025-06-08T20:03:57.196Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 28,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "R5ikoinwJbZZfoTXV54PF8CGGRCDBN",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 28,
+        "token_family": "58974415-c9dd-416c-805c-e3c3177193cf",
+        "created": "2025-06-08T22:30:27.442Z",
+        "updated": "2025-06-08T22:30:27.442Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 29,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "token": "kNQlUkBcUUrs0OvIRVpD3oGVo0yefO",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 29,
+        "token_family": "b6cd6cd6-a52b-4f87-ab6e-393981a914fc",
+        "created": "2025-06-08T22:52:33.129Z",
+        "updated": "2025-06-08T22:52:33.129Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 30,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "j1sN952XSxKAirY8AXU9sID8enn6Vh",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 30,
+        "token_family": "34efe8fa-eff4-4da2-b99d-947138099639",
+        "created": "2025-06-08T22:54:07.122Z",
+        "updated": "2025-06-08T22:54:07.122Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 31,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "2VtlDf5MXeQMPmmCiaJ6qnGtk6Qd5k",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 31,
+        "token_family": "a16a41b8-4c14-4519-ba3d-a1cc8b4866fe",
+        "created": "2025-06-08T22:55:35.712Z",
+        "updated": "2025-06-08T22:55:35.712Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 32,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "TAY1LLz7UqrtT9tfIfltnehJPQMNWl",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 32,
+        "token_family": "036a741f-27c1-463a-944a-52b6f3efe6c3",
+        "created": "2025-06-09T10:54:06.371Z",
+        "updated": "2025-06-09T10:54:06.371Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 33,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "dY4kmcrhw7lVkYfEutbJSGngmyyIMx",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 33,
+        "token_family": "64e8be9d-f244-4c7a-b5e0-f4e5a15c821e",
+        "created": "2025-06-09T18:33:33.831Z",
+        "updated": "2025-06-09T18:33:33.831Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 34,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "blniVZDdq60pFbIfhNbYjoQs15DwrS",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 34,
+        "token_family": "5ab7ef86-9d63-4f5b-8aed-9b926e65ff43",
+        "created": "2025-06-09T18:40:24.722Z",
+        "updated": "2025-06-09T18:40:24.722Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 35,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "0yyIVkI2BeehwxI73NrAvxThrA18b0",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 35,
+        "token_family": "a5a09465-3b4b-4bfd-9c94-a2c0ed20173e",
+        "created": "2025-06-09T18:48:23.353Z",
+        "updated": "2025-06-09T18:48:23.353Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 36,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "token": "FpDBlLlBVx2UjN5NRjKZU6enL4KvHG",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 36,
+        "token_family": "22242a93-e790-44de-b63d-020331598460",
+        "created": "2025-06-10T11:38:10.537Z",
+        "updated": "2025-06-10T11:38:10.537Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 37,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "kxndbGoUfjHFdPNbd7JXMPMpWh4Yms",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 37,
+        "token_family": "9ebf2e14-f80a-4bfd-a846-2f05d03360a2",
+        "created": "2025-06-10T11:47:10.039Z",
+        "updated": "2025-06-10T11:47:10.039Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 38,
+    "fields": {
+        "user": [
+            "ana"
+        ],
+        "token": "YLaFi8jlKq3Id0mcFp4Rk21Bb5oiYS",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 38,
+        "token_family": "f807d072-d514-45af-ab96-387c0a65191d",
+        "created": "2025-06-10T12:11:31.625Z",
+        "updated": "2025-06-10T12:11:31.625Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 39,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "LjmTpEoLxh41MLBwTJL3d7Dw9tiPzv",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 39,
+        "token_family": "84cc8a0f-1ca1-4a9e-a511-fd4852376abb",
+        "created": "2025-06-10T12:26:03.441Z",
+        "updated": "2025-06-10T12:26:03.441Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 40,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "J5fvPxnldi19IhQJKKLqa6rdH1b8A5",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 40,
+        "token_family": "afb3da68-0d8a-4a20-a6bf-e35d98783e0f",
+        "created": "2025-06-10T12:26:26.971Z",
+        "updated": "2025-06-10T12:26:26.971Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 41,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "QmdxZQH6O4qm82u158hUQ49FcqRk4F",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 41,
+        "token_family": "cbe30230-8e7f-4464-982e-1bc52ca9cae4",
+        "created": "2025-06-10T12:44:57.903Z",
+        "updated": "2025-06-10T12:44:57.903Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 42,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "MWlRph1P4h2uZB8IpXy037cJamDWol",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 42,
+        "token_family": "30fd06b6-7b66-4576-bf55-60381a5c5acc",
+        "created": "2025-06-10T12:49:04.559Z",
+        "updated": "2025-06-10T12:49:04.559Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 43,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "zK0VrlpYwRBWSxSdBh28PczlG75g8S",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 43,
+        "token_family": "5eb2f93c-d16b-431f-bf76-5f841a698ebb",
+        "created": "2025-06-10T12:50:03.604Z",
+        "updated": "2025-06-10T12:50:03.604Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 44,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "7nACNGnqjIaVCD253kXRpVj4wBHQ70",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 44,
+        "token_family": "5865bc2a-9647-4faa-9b99-7c246468aaba",
+        "created": "2025-06-10T13:03:59.236Z",
+        "updated": "2025-06-10T13:03:59.236Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 45,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "Ed627vy9OENLWTJHBC2JTPXJzA0Td9",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 45,
+        "token_family": "67b99de8-399e-4642-be68-ae15eb9309fb",
+        "created": "2025-06-10T13:05:06.321Z",
+        "updated": "2025-06-10T13:05:06.321Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 46,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "J2lwemDCBE0qQbF0zIhkNxW25P0eYm",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 46,
+        "token_family": "016a6257-6170-42d3-8a82-623fe71bcd8f",
+        "created": "2025-06-10T13:07:36.347Z",
+        "updated": "2025-06-10T13:07:36.347Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 47,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "XZjschrfAaNix5TG3BaONZbItrRLxQ",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 47,
+        "token_family": "1180eddc-790f-417a-8dba-b75a9218aea3",
+        "created": "2025-06-10T13:12:21.520Z",
+        "updated": "2025-06-10T13:12:21.520Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 48,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "QMXcGxlgT14j5TvN7LilGYPuDbZh2W",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 48,
+        "token_family": "70a24049-6292-4607-8776-b0b0db5ae899",
+        "created": "2025-06-10T15:35:18.690Z",
+        "updated": "2025-06-10T15:35:18.690Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 49,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "s95qtMJJKPVI86pUf72EimS5JZLze4",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 49,
+        "token_family": "18f7f8d9-e831-40b6-ab10-9ebc965242ac",
+        "created": "2025-06-10T15:38:49.394Z",
+        "updated": "2025-06-10T15:38:49.394Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 50,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "xpyrPQGTeVLAcAawfzVo7yNAaE7K6Y",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 50,
+        "token_family": "883664f4-bb6d-48fb-9a9f-8d35ed24d9cc",
+        "created": "2025-06-10T16:08:48.870Z",
+        "updated": "2025-06-10T16:08:48.870Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 51,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "9jRqpiITA4F0hps64ddbLIBVq4psGR",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 51,
+        "token_family": "11cf8705-74e0-48d2-bf9d-bff1386aa8ef",
+        "created": "2025-06-10T16:14:42.130Z",
+        "updated": "2025-06-10T16:14:42.130Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 52,
+    "fields": {
+        "user": [
+            "juan"
+        ],
+        "token": "p9Tw4lQwC14r0ccng9sV34Oa5l0IKo",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 52,
+        "token_family": "8c21ecaf-2e48-4ec0-be41-a86678659cfc",
+        "created": "2025-06-10T16:15:09.393Z",
+        "updated": "2025-06-10T16:15:09.393Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 53,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "9baRK9GcIsHWeWdCdLa7qxOwal09HE",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 53,
+        "token_family": "4430aba3-97b3-4aba-826c-1226e7f24a09",
+        "created": "2025-06-10T16:16:18.090Z",
+        "updated": "2025-06-10T16:16:18.090Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 54,
+    "fields": {
+        "user": [
+            "juan"
+        ],
+        "token": "Y4xA1PADazWQXHBZjXekTgkqTZF7tF",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 54,
+        "token_family": "e7fa5e6e-2eeb-43ad-ba11-bf7457ebd9b7",
+        "created": "2025-06-10T16:17:40.137Z",
+        "updated": "2025-06-10T16:17:40.137Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 55,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "iDQc76tRj6x6wVJAqJl2qhFjI91Xjy",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 55,
+        "token_family": "1453b101-c715-4828-a7f2-d4b9095c4ca9",
+        "created": "2025-06-10T17:34:28.843Z",
+        "updated": "2025-06-10T17:34:28.843Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 56,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "pSLtPh92Au4jbsCTydQEr1GgALBN0M",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 56,
+        "token_family": "1983bd5c-4b67-4691-8ecf-664ec6264feb",
+        "created": "2025-06-10T17:35:16.383Z",
+        "updated": "2025-06-10T17:35:16.383Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 57,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "vpNaVfGe6CY72cBljjKf6XnMDYQDzs",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 57,
+        "token_family": "44ec3ee6-855f-4910-bcf6-d6b05d7ba556",
+        "created": "2025-06-10T17:36:35.699Z",
+        "updated": "2025-06-10T17:36:35.699Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 58,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "dCKj1FoYii6S8megGne6ESNWMeTtsA",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 58,
+        "token_family": "14d2c0af-40b6-42b8-b8ee-a756fc7bd1de",
+        "created": "2025-06-10T18:09:04.415Z",
+        "updated": "2025-06-10T18:09:04.415Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 59,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "fjK51OGYsBSgQCTvP5fk37Ex6IkESr",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 59,
+        "token_family": "ec5ba1e7-52be-41ba-9b83-cec5c14448e7",
+        "created": "2025-06-10T18:11:53.722Z",
+        "updated": "2025-06-10T18:11:53.722Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 60,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "AZ717eZAgPxRpDEWif8W6m7rPDcUEc",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 60,
+        "token_family": "3b030389-52d2-4691-9264-1a0e57f02b97",
+        "created": "2025-06-10T18:15:04.933Z",
+        "updated": "2025-06-10T18:15:04.933Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 61,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "zJmZqCgsma08R5QxTSzpCA8MQWqBiq",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 61,
+        "token_family": "8565d977-d78a-4460-88a2-32a03cda3274",
+        "created": "2025-06-10T18:17:44.911Z",
+        "updated": "2025-06-10T18:17:44.911Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 62,
+    "fields": {
+        "user": [
+            "vendedorr"
+        ],
+        "token": "Btap5KzT8072DVeXfMdfnYFQnX5ykb",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 62,
+        "token_family": "443f0cd1-5400-4009-93fd-c558f753f8e5",
+        "created": "2025-06-10T18:19:35.406Z",
+        "updated": "2025-06-10T18:19:35.406Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 63,
+    "fields": {
+        "user": [
+            "cliente"
+        ],
+        "token": "WH1cId25If9c40vKNRQNmzXNE2qTK3",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 63,
+        "token_family": "32cca279-1720-4cc9-a91c-3ee3b9fe51f1",
+        "created": "2025-06-10T18:22:59.720Z",
+        "updated": "2025-06-10T18:22:59.720Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 64,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "gRT2L9h9lGy4TAabMjmhEXmyMr1bli",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 64,
+        "token_family": "b5c0d597-2d85-49ab-adcb-db33ca7a2630",
+        "created": "2025-06-11T12:29:55.161Z",
+        "updated": "2025-06-11T12:29:55.161Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 65,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "7nanEeSnnWxsJ8NG3wqy8A6JiIQjOo",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 65,
+        "token_family": "c437b49a-b559-449a-8902-98dd041b6e5f",
+        "created": "2025-06-11T12:36:28.272Z",
+        "updated": "2025-06-11T12:36:28.272Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 66,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "QxvarlwYRHbSezSgLSrERsW6biSTLj",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 66,
+        "token_family": "0402830e-6cb5-453b-a26d-cbaf78473fdd",
+        "created": "2025-06-11T13:04:28.419Z",
+        "updated": "2025-06-11T13:04:28.419Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 67,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "Sh0Kee8Aa9sRM0iARlyiMeDy7HPM2k",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 67,
+        "token_family": "03387945-d8eb-4b41-9946-a4282820d6ae",
+        "created": "2025-06-11T14:28:04.091Z",
+        "updated": "2025-06-11T14:28:04.092Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 68,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "1WQaymK1NnDSziUu96JMon6BjZ9aNl",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 68,
+        "token_family": "c5d16f9c-a2e0-4f3f-b348-91c87b0a39ae",
+        "created": "2025-06-11T14:33:30.108Z",
+        "updated": "2025-06-11T14:33:30.108Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 69,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "F7NrIsKkA6C856VtaZ3lefTuL0d6y9",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 69,
+        "token_family": "2351e494-1f05-4d25-9dc7-b4ab3864c058",
+        "created": "2025-06-11T14:56:00.022Z",
+        "updated": "2025-06-11T14:56:00.022Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 70,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "tgDfRcQe0IoAIUEOg5VLK4j1X3EDHT",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 70,
+        "token_family": "5a1a6a3c-358d-4e79-95dc-1e955e3337bc",
+        "created": "2025-06-11T15:06:58.901Z",
+        "updated": "2025-06-11T15:06:58.901Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 71,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "QO4hzRZJS7IwOSlYdnPGSdegNuuS3a",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 71,
+        "token_family": "4c71a362-5c7e-4bf7-a66e-1bc2d6a5a364",
+        "created": "2025-06-11T15:11:12.063Z",
+        "updated": "2025-06-11T15:11:12.063Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 72,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "v1MNBYsXJIvbRcxej9yJy4SwKiOm2V",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 72,
+        "token_family": "29e6c940-f25f-4ea2-8b93-9951cf1b3d56",
+        "created": "2025-06-11T15:13:33.103Z",
+        "updated": "2025-06-11T15:13:33.103Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 73,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "KhwDHcQjY7ONIDjeE7k0mdjwlCc8VA",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 73,
+        "token_family": "a15358c6-3214-40e5-baf7-c24b98aa149e",
+        "created": "2025-06-11T15:26:45.545Z",
+        "updated": "2025-06-11T15:26:45.545Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 74,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "l5kF795bf4d6kg6LJ7NPcJEaANz80N",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 74,
+        "token_family": "d5d08075-c19d-4a85-ad14-82af25a559b4",
+        "created": "2025-06-11T15:32:30.900Z",
+        "updated": "2025-06-11T15:32:30.900Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 75,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "fzL9cWFioAGW46NmhFPN2kZ0OrPD7e",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 75,
+        "token_family": "a1eb7a93-889c-4687-be76-3905e939d292",
+        "created": "2025-06-11T15:35:53.455Z",
+        "updated": "2025-06-11T15:35:53.455Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 76,
+    "fields": {
+        "user": [
+            "creador"
+        ],
+        "token": "lwhW24sDXVJsCFLjnQj9lmsTDfq9Z9",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 76,
+        "token_family": "4afecd75-8323-464e-876c-27862e3d8b43",
+        "created": "2025-06-11T15:40:55.975Z",
+        "updated": "2025-06-11T15:40:55.975Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 77,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "087Mc3sulavgQ48QDIg8gw2WtFhNLL",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 77,
+        "token_family": "0a03e56f-6abb-457b-82bd-7b4533070a39",
+        "created": "2025-06-11T17:55:41.872Z",
+        "updated": "2025-06-11T17:55:41.872Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 78,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "GiNj6VYac9W5VRiqEXgCKgCN2dHQVn",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 78,
+        "token_family": "dcf79160-efac-4004-9a28-1af7b8d509ca",
+        "created": "2025-06-11T18:32:55.056Z",
+        "updated": "2025-06-11T18:32:55.056Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 79,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "GdNqJ9igpXsABttAJAl2rTZ8eC0ikB",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 79,
+        "token_family": "b955e645-29e3-4f35-ada7-6f37216ee2bd",
+        "created": "2025-06-12T09:27:41.169Z",
+        "updated": "2025-06-12T09:27:41.169Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 80,
+    "fields": {
+        "user": [
+            "manu"
+        ],
+        "token": "AjXtt28SXWHE5aIIi60Pzn2okgRFNH",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 80,
+        "token_family": "d6af9495-3067-4be0-8978-8170f34a0b88",
+        "created": "2025-06-12T13:57:02.923Z",
+        "updated": "2025-06-12T13:57:02.923Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 81,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "8quLjH84FibjqwYwMU9JuDaULZAVS0",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 81,
+        "token_family": "a3467081-4c7b-42c3-bfab-35703927dea1",
+        "created": "2025-06-12T13:57:59.441Z",
+        "updated": "2025-06-12T13:57:59.441Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 82,
+    "fields": {
+        "user": [
+            "vendedor"
+        ],
+        "token": "csftYxREUB7pIjH6l9B0ZhNs7WtRQt",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 82,
+        "token_family": "fc87f8a3-9170-4ffc-9cbf-e1c2eda136e6",
+        "created": "2025-06-12T14:02:31.764Z",
+        "updated": "2025-06-12T14:02:31.764Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 83,
+    "fields": {
+        "user": [
+            "pablo"
+        ],
+        "token": "XJ1ec9LJESSE2tbEH1wKVSGz7hQfDn",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 83,
+        "token_family": "e0d05b58-a920-4b09-8b6f-ded3914ba395",
+        "created": "2025-06-12T14:06:24.000Z",
+        "updated": "2025-06-12T14:06:24.000Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 84,
+    "fields": {
+        "user": [
+            "nuevouser"
+        ],
+        "token": "v6Wq08ZK1ds6avOiGpdERi4gx9TZap",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 84,
+        "token_family": "09421a42-79b3-4bd2-b9e8-ed59a42f175f",
+        "created": "2025-06-12T21:29:07.057Z",
+        "updated": "2025-06-12T21:29:07.057Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 85,
+    "fields": {
+        "user": [
+            "manuu"
+        ],
+        "token": "k6A4RuYHAe22a73CznJ1BJQL5ZkCKg",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 85,
+        "token_family": "f5aba1f8-bec6-4e35-8640-38170032f205",
+        "created": "2025-06-14T15:46:50.214Z",
+        "updated": "2025-06-14T15:46:50.214Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 86,
+    "fields": {
+        "user": [
+            "manuuu"
+        ],
+        "token": "N6c2o8bki3naf0sTonJu4VLJ56d5yg",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 86,
+        "token_family": "3f5f40eb-6808-41ed-8fa9-240dc5cce52e",
+        "created": "2025-06-14T15:48:18.198Z",
+        "updated": "2025-06-14T15:48:18.198Z",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 87,
+    "fields": {
+        "user": [
+            "manuuuu"
+        ],
+        "token": "MugZqlGBPeoGoRWYwRZyucUXJeJRfD",
+        "application": [
+            "client_id"
+        ],
+        "access_token": 87,
+        "token_family": "8d3e4739-8ed1-46df-95db-c1f7e1467cf3",
+        "created": "2025-06-14T15:48:56.891Z",
+        "updated": "2025-06-14T15:48:56.891Z",
+        "revoked": null
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-05-27T12:09:39.306Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "object_id": "1",
+        "object_repr": "Ropa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-05-27T12:10:12.238Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "object_id": "2",
+        "object_repr": "Costales",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-05-27T12:10:20.359Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "object_id": "3",
+        "object_repr": "Inciensos y complementos",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-05-27T12:10:27.138Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "object_id": "4",
+        "object_repr": "Souvenirs",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-05-27T12:10:39.414Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "object_id": "5",
+        "object_repr": "Imágenes y esculturas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-05-27T12:10:44.727Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "categoria"
+        ],
+        "object_id": "6",
+        "object_repr": "Discos",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-05-27T12:14:32.036Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "1",
+        "object_repr": "Clientes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-05-27T12:16:14.451Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "2",
+        "object_repr": "Vendedores",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-05-27T12:16:59.924Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "2",
+        "object_repr": "vendedor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-05-27T12:17:06.182Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "vendedor"
+        ],
+        "object_id": "1",
+        "object_repr": "vendedor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-05-27T12:21:32.551Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "2",
+        "object_repr": "vendedor",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-05-27T12:22:12.871Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "4",
+        "object_repr": "vendedor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-05-27T12:44:55.213Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "4",
+        "object_repr": "vendedor",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-05-27T12:45:52.589Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "5",
+        "object_repr": "vendedor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-05-27T12:47:00.796Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "vendedor"
+        ],
+        "object_id": "2",
+        "object_repr": "vendedor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-05-27T12:49:05.602Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "5",
+        "object_repr": "vendedor",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-05-29T15:02:28.946Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "estado"
+        ],
+        "object_id": "1",
+        "object_repr": "En camino",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-05-29T15:02:46.922Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "estado"
+        ],
+        "object_id": "2",
+        "object_repr": "Entregado",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-06-10T11:44:05.787Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "8",
+        "object_repr": "creador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-06-10T11:44:44.260Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "object_id": "1",
+        "object_repr": "creador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-06-10T11:47:39.783Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "8",
+        "object_repr": "creador",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-06-10T11:49:12.743Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "9",
+        "object_repr": "creador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-06-10T11:49:21.524Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "object_id": "2",
+        "object_repr": "creador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-06-10T11:51:09.936Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "9",
+        "object_repr": "creador",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-06-10T12:13:26.045Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "9",
+        "object_repr": "creador",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-06-10T12:17:36.274Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "10",
+        "object_repr": "creador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-06-10T12:17:45.471Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "creador"
+        ],
+        "object_id": "3",
+        "object_repr": "creador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-06-10T12:19:32.999Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "11",
+        "object_repr": "sdsd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-06-10T12:19:45.816Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "object_id": "3",
+        "object_repr": "sdsd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-06-10T12:20:01.156Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "object_id": "3",
+        "object_repr": "sdsd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-06-10T12:20:06.304Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "11",
+        "object_repr": "sdsd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-06-10T12:20:35.473Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "12",
+        "object_repr": "qqq",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-06-10T12:20:42.234Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "cliente"
+        ],
+        "object_id": "4",
+        "object_repr": "qqq",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-06-10T12:25:55.189Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "12",
+        "object_repr": "qqq",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-06-10T12:25:55.189Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "tienda",
+            "usuario"
+        ],
+        "object_id": "10",
+        "object_repr": "creador",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-06-11T15:32:15.193Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "1",
+        "object_repr": "Clientes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-06-11T15:33:29.560Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "1",
+        "object_repr": "Clientes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-06-11T15:34:26.259Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "2",
+        "object_repr": "Vendedores",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+}
+]
