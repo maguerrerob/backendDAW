@@ -13,3 +13,4 @@ reportlab~=4.4.1
 python-decouple
 pytest-django
 gunicorn~=23.0.0
+psycopg2-binary
